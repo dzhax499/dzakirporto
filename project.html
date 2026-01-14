@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Project Detail</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .project-detail { padding: 100px 20px 60px; min-height: 60vh; }
+      .project-detail .back { display:inline-block; margin-bottom:18px; color:#00fff2; }
+      .project-detail .meta { max-width:900px; margin: 0 auto; }
+      .project-detail h1{ color:#fff; margin-bottom:12px; }
+      .project-detail p{ color:#ddd; line-height:1.6; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Dzakir Tsabit</h1>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="project-detail">
+      <div class="container">
+        <a class="back" href="index.html">Back to projects</a>
+        <div class="meta">
+          <img id="pd-image" src="" alt="Project image" style="width:100%;height:380px;object-fit:cover;border-radius:10px;background:#222;margin-bottom:16px;" />
+          <h1 id="pd-title">Project Title</h1>
+          <p id="pd-desc">Project description will appear here.</p>
+          <div id="pd-tech" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;"></div>
+
+          <section id="pd-docs" style="margin-top:22px;color:#fff;">
+            <h2 style="margin-bottom:8px;color:#fff;">Documentation</h2>
+            <div id="pd-doc-content" style="color:#ddd;">You can paste full documentation for the project here.</div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Dzakir Tsabit</p>
+      </div>
+    </footer>
+
+    <script>
+      const PROJECTS = {
+        pemanfaatan: {
+          title: 'Pemanfaatan Aplikasi Perkantoran',
+          image: 'img/pemanfaatan.jpg',
+          desc: 'Project focused on utilizing office applications for business process automation. Create templates, macros, and automated workflows.',
+          tech: ['MS Excel','MS Word','MS PowerPoint','VBA'],
+          docs: '<p>Documentation placeholder. Add project goals, screenshots, setup, and notes here.</p>'
+        },
+        library: {
+          title: 'Pengembangan Aplikasi Berbasis Library',
+          image: 'img/library.jpg',
+          desc: 'A library management application built using Java and libraries. Features: catalog, members, borrowing, reporting.',
+          tech: ['Java','Raylib','SDL3'],
+          docs: '<p>Documentation placeholder for library app: architecture, usage, endpoints, build steps.</p>'
+        },
+        webapp: {
+          title: 'Pengembangan Aplikasi Berbasis Website',
+          image: 'img/webapp.jpg',
+          desc: 'Web application using modern web technologies: responsive UI and backend functionality.',
+          tech: ['HTML/CSS','JavaScript','PHP','MySQL'],
+          docs: '<p>Documentation placeholder: features, deployment, API docs, database schema.</p>'
+        }
+      };
+
+      function fallbackImage(imgEl) {
+        imgEl.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+          '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">' +
+          '<rect width="100%" height="100%" fill="#222"/>' +
+          '<text x="50%" y="50%" fill="#888" font-family="Arial,Helvetica,sans-serif" font-size="24" text-anchor="middle" dominant-baseline="middle">Image Not Available</text>' +
+          '</svg>'
+        );
+      }
+
+      function populate() {
+        const params = new URLSearchParams(location.search);
+        const id = params.get('id');
+        const data = PROJECTS[id];
+        const img = document.getElementById('pd-image');
+        const title = document.getElementById('pd-title');
+        const desc = document.getElementById('pd-desc');
+        const tech = document.getElementById('pd-tech');
+        const docs = document.getElementById('pd-doc-content');
+
+        if (!data) {
+          title.textContent = 'Project not found';
+          desc.textContent = 'The requested project does not exist yet.';
+          fallbackImage(img);
+          return;
+        }
+
+        title.textContent = data.title;
+        desc.textContent = data.desc;
+        img.src = data.image || '';
+        img.onerror = () => fallbackImage(img);
+
+        tech.innerHTML = '';
+        (data.tech || []).forEach(t => {
+          const s = document.createElement('span');
+          s.className = 'tech-tag';
+          s.textContent = t;
+          tech.appendChild(s);
+        });
+
+        docs.innerHTML = data.docs || '<p>No documentation yet.</p>';
+      }
+
+      populate();
+    </script>
+  </body>
+</html>
