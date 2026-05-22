@@ -1,243 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Dzakir Tsabit - Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Manrope:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1>Dzakir Tsabit</h1>
-        <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
-          <span class="hamburger"></span>
-        </button>
-        <nav class="nav-menu">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#connect">Connect</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Dzakir Tsabit - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Manrope:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <main>
-      <section id="about">
-        <div class="container-horizontal">
-          <h2>About Me</h2>
-          <div class="section-content">
-            <div class="profile-img">
-              <img src="profile1-almet-transparent.png" alt="Dzakir Tsabit" class="glow-blue" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Dzakir Tsabit</h1>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container-horizontal">
+        <div class="section-content">
+          <div class="profile-img">
+            <img src="profile1-almet-transparent.png" alt="Dzakir Tsabit" class="glow-blue" />
+          </div>
+          <div class="about-text"
+            style="font-family: 'Courier New', Courier, monospace; text-align: left; text-shadow: none; font-size: 1.05rem; line-height: 1.6;">
+            <div class="text-red-500 font-bold text-xl mb-1">root@about-me</div>
+            <div class="text-gray-400 mb-4">----------------</div>
+
+            <div class="mb-3 flex items-start">
+              <span class="text-red-500 font-bold w-24 shrink-0">Whoami:</span>
+              <span class="text-gray-300">Hello! I'm <strong class="text-red-500">Dzakir Tsabit</strong>, a passionate
+                Informatics Engineering student at Bandung State Polytechnic (Polban).</span>
             </div>
-            <div class="about-text">
-              <p>
-                Hello! I'm <span class="text-red-500"><strong>Dzakir Tsabit</strong></span>, a passionate
-                Informatics Engineering student at Bandung State Polytechnic
-                (Polban). Currently in my 4rd semester, I'm diving deep into the
-                world of programming and technology.
-              </p>
-              <p>
-                I love solving problems through code and creating innovative
-                solutions. My journey in informatics has been exciting, and I'm
-                always eager to learn new technologies and improve my skills.
-              </p>
-            </div>
-            <div class="flex items-center gap-2 text-3xl text-white font-bold uppercase">
-              <span>I'm</span>
 
-              <span
-                class="relative inline-block overflow-hidden text-red-500 h-9"
-                data-words='["Learner","Builder","Programmer","Developer","Creator","Engineer"]'
-              >
-                <span class="word-track block">
-                    <span class="word word-current">Learner</span>
-                </span>
+            <div class="mb-3 flex items-start">
+              <span class="text-red-500 font-bold w-24 shrink-0">Current:</span>
+              <span class="text-gray-300">Currently in my 4rd semester, I'm diving deep into the world of programming
+                and technology.</span>
+            </div>
+
+            <div class="mb-3 flex items-start">
+              <span class="text-red-500 font-bold w-24 shrink-0">Passion:</span>
+              <span class="text-gray-300">I love solving problems through code and creating innovative solutions.</span>
+            </div>
+
+            <div class="mb-3 flex items-start">
+              <span class="text-red-500 font-bold w-24 shrink-0">Journey:</span>
+              <span class="text-gray-300">My journey in informatics has been exciting, and I'm always eager to learn new
+                technologies and improve my skills.</span>
+            </div>
+
+            <div class="mt-6 flex">
+              <div class="w-6 h-6" style="background-color: #1a1b26;"></div>
+              <div class="w-6 h-6" style="background-color: #ef4444;"></div>
+              <div class="w-6 h-6" style="background-color: #22c55e;"></div>
+              <div class="w-6 h-6" style="background-color: #eab308;"></div>
+              <div class="w-6 h-6" style="background-color: #3b82f6;"></div>
+              <div class="w-6 h-6" style="background-color: #a855f7;"></div>
+              <div class="w-6 h-6" style="background-color: #06b6d4;"></div>
+              <div class="w-6 h-6" style="background-color: #f8fafc;"></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-3xl text-white font-bold uppercase">
+            <span>I'm</span>
+
+            <span class="relative inline-block overflow-hidden text-red-500 h-9"
+              data-words='["Learner","Builder","Programmer","Developer","Creator","Engineer"]'>
+              <span class="word-track block">
+                <span class="word word-current">Learner</span>
               </span>
-            </div>
-            </div>
-            <div class="skills ">
-              <h3 class="text-center">Skills & Technologies</h3>
-              <div class="skill-list">
-                <span class="skill-item">HTML</span>
-                <span class="skill-item">CSS</span>
-                <span class="skill-item">JavaScript</span>
-                <span class="skill-item">Python</span>
-                <span class="skill-item">Java</span>
-                <span class="skill-item">PHP</span>
-                <span class="skill-item">Git</span>
-                <span class="skill-item">C++</span>
-                <span class="skill-item">C</span>
-                <span class="skill-item">C#</span>
-                <span class="skill-item">Kotlin</span>
-                <span class="skill-item">Dart</span>
-                <span class="skill-item">LUA</span>
-                <span class="skill-item">Shell</span>
-                <span class="skill-item">MySQL</span>
-                <span class="skill-item">NoSQL</span>
-                <span class="skill-item">MongoDB</span>
-                <span class="skill-item">PostgreSQL</span>
-                <span class="skill-item">Blender</span>
-                <span class="skill-item">GODOT</span>
-                <span class="skill-item">Roblox Studio</span>
-                <span class="skill-item">Android Studio</span>
-                <span class="skill-item">CI4</span>
-                <span class="skill-item">Laravel</span>
-                <span class="skill-item">Power Designer</span>
-                <span class="skill-item">Linux - Debian & Kali</span>
-                <span class="skill-item">WireShark</span>
-                <span class="skill-item">Burp Suite</span>
-                <span class="skill-item">Cisco Packet Tracer</span>
-                <span class="skill-item">SQL Injection</span>
-                <span class="skill-item">SQLmap</span>
-              </div>
+            </span>
           </div>
         </div>
-      </section>
-
-      <section id="projects">
-        <div class="container">
-          <h2>My Projects</h2>
-          <div class="projects-grid">
-            <div class="project completed pot">
-              <img class="project-thumb" src="img/projek/sudoku/Sudoku_Thumb.png" data-image="img/projek/sudoku/Sudoku_Thumb.png" alt="Permainan Sudoku Terminal" />
-              <div class="project-status">Completed</div>
-              <h3>Permainan Sudoku Terminal</h3>
-              <p>
-                Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C 
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">C</span>
-                <span class="tech-tag">VS Code</span>
-                <span class="tech-tag">Git</span>
-              </div>
-              <a class="project-detail-link" href="project.html?id=pemanfaatan">View Details</a>
-            </div>
-
-            <div class="project completed">
-              <img class="project-thumb" data-image="img/library.jpg" alt="Pengembangan Aplikasi Berbasis Library" />
-              <div class="project-status">Completed</div>
-              <h3>Pengembangan Aplikasi Berbasis Library</h3>
-              <p>
-                A library management application built using Java with external
-                libraries. Features book cataloging, member management,
-                borrowing system, and reporting functionality. Implemented using
-                various Java libraries for enhanced functionality.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">C</span>
-                <span class="tech-tag">SLD2</span>
-                <span class="tech-tag">Raylib</span>
-                <span class="tech-tag">SDL3</span>
-              </div>
-              <a class="project-detail-link" href="project.html?id=library">View Details</a>
-            </div>
-            <div class="project completed">
-              <img class="project-thumb" data-image="img/library.jpg" alt="Pengembangan Aplikasi Berbasis Library" />
-              <div class="project-status">Completed</div>
-              <h3>Pengembangan Aplikasi Berbasis Library</h3>
-              <p>
-                A library management application built using Java with external
-                libraries. Features book cataloging, member management,
-                borrowing system, and reporting functionality. Implemented using
-                various Java libraries for enhanced functionality.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">C</span>
-                <span class="tech-tag">SLD2</span>
-                <span class="tech-tag">Raylib</span>
-                <span class="tech-tag">SDL3</span>
-              </div>
-              <a class="project-detail-link" href="project.html?id=library">View Details</a>
-            </div>
-
-            <div class="project current">
-              <img class="project-thumb" data-image="img/webapp.jpg" alt="Pengembangan Aplikasi Berbasis Website" />
-              <div class="project-status">Currently Working</div>
-              <h3>Pengembangan Aplikasi Berbasis Website</h3>
-              <p>
-                Currently developing a comprehensive web application using
-                modern web technologies. This project focuses on creating
-                responsive, user-friendly interfaces and robust backend
-                functionality for real-world business solutions.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">HTML/CSS</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-              <a class="project-detail-link" href="project.html?id=webapp">View Details</a>
-            </div>
+        <div class="skills ">
+          <h3 class="text-center">Skills & Technologies</h3>
+          <div class="skill-list">
+            <span class="skill-item">HTML</span>
+            <span class="skill-item">CSS</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">Java</span>
+            <span class="skill-item">PHP</span>
+            <span class="skill-item">Git</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">C</span>
+            <span class="skill-item">C#</span>
+            <span class="skill-item">Kotlin</span>
+            <span class="skill-item">Dart</span>
+            <span class="skill-item">LUA</span>
+            <span class="skill-item">Shell</span>
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">NoSQL</span>
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">Blender</span>
+            <span class="skill-item">GODOT</span>
+            <span class="skill-item">Roblox Studio</span>
+            <span class="skill-item">Android Studio</span>
+            <span class="skill-item">CI4</span>
+            <span class="skill-item">Laravel</span>
+            <span class="skill-item">Power Designer</span>
+            <span class="skill-item">Linux - Debian & Kali</span>
+            <span class="skill-item">WireShark</span>
+            <span class="skill-item">Burp Suite</span>
+            <span class="skill-item">Cisco Packet Tracer</span>
+            <span class="skill-item">SQL Injection</span>
+            <span class="skill-item">SQLmap</span>
           </div>
         </div>
-      </section>
-      <section id="connect" class="connect">
-        <div class="container">
-          <h2>Connect with Me</h2>
-          <div class="social-links">
-            <a href="https://www.facebook.com/daz.dzakir/" target="_blank" class="social-link">
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/civicdici/" target="_blank" class="social-link">
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/dzakir-tsabit-b49666325/" target="_blank" class="social-link">
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/dzhax499" target="_blank" class="social-link">
-              <i class="fa fa-github"></i>
-            </a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div class="project completed pot">
+            <img class="project-thumb" src="img/projek/sudoku/Sudoku_Thumb.png"
+              data-image="img/projek/sudoku/Sudoku_Thumb.png" alt="Permainan Sudoku Terminal" />
+            <div class="project-status">Completed</div>
+            <h3>Permainan Sudoku Terminal</h3>
+            <p>
+              Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">VS Code</span>
+              <span class="tech-tag">Git</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=pemanfaatan">View Details</a>
+          </div>
+
+          <div class="project completed">
+            <img class="project-thumb" data-image="img/library.jpg" alt="Pengembangan Aplikasi Berbasis Library" />
+            <div class="project-status">Completed</div>
+            <h3>Pengembangan Aplikasi Berbasis Library</h3>
+            <p>
+              A library management application built using Java with external
+              libraries. Features book cataloging, member management,
+              borrowing system, and reporting functionality. Implemented using
+              various Java libraries for enhanced functionality.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">SLD2</span>
+              <span class="tech-tag">Raylib</span>
+              <span class="tech-tag">SDL3</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=library">View Details</a>
+          </div>
+          <div class="project completed">
+            <img class="project-thumb" data-image="img/library.jpg" alt="Pengembangan Aplikasi Berbasis Library" />
+            <div class="project-status">Completed</div>
+            <h3>Pengembangan Aplikasi Berbasis Library</h3>
+            <p>
+              A library management application built using Java with external
+              libraries. Features book cataloging, member management,
+              borrowing system, and reporting functionality. Implemented using
+              various Java libraries for enhanced functionality.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">SLD2</span>
+              <span class="tech-tag">Raylib</span>
+              <span class="tech-tag">SDL3</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=library">View Details</a>
+          </div>
+
+          <div class="project current">
+            <img class="project-thumb" data-image="img/webapp.jpg" alt="Pengembangan Aplikasi Berbasis Website" />
+            <div class="project-status">Currently Working</div>
+            <h3>Pengembangan Aplikasi Berbasis Website</h3>
+            <p>
+              Currently developing a comprehensive web application using
+              modern web technologies. This project focuses on creating
+              responsive, user-friendly interfaces and robust backend
+              functionality for real-world business solutions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=webapp">View Details</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section id="connect" class="connect">
+      <div class="container">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+          <a href="https://www.facebook.com/daz.dzakir/" target="_blank" class="social-link">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/civicdici/" target="_blank" class="social-link">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dzakir-tsabit-b49666325/" target="_blank" class="social-link">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/dzhax499" target="_blank" class="social-link">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact">
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
         <div class="container">
-          <h2>Contact Me</h2>
-          <div class="container">
           <div class="social-links">
             <a href="https://wa.me/6282119785325" target="_blank" class="social-link">
               <i class="fa fa-whatsapp"></i>
             </a>
-            <a href="https://mail.google.com/mail/u/0/?to=dzdzakir@gmail.com&su=I%27m%20Visiting%20Your%20Web%20Porto%20!&body=Type%20your%20purpose...&fs=1&tf=cm" target="_blank" class="social-link">
+            <a href="https://mail.google.com/mail/u/0/?to=dzdzakir@gmail.com&su=I%27m%20Visiting%20Your%20Web%20Porto%20!&body=Type%20your%20purpose...&fs=1&tf=cm"
+              target="_blank" class="social-link">
               <i class="fa fa-envelope"></i>
             </a>
           </div>
         </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2026 Dzakir Tsabit Porto</p>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <!-- Project detail modal -->
-    <div id="projectModal" class="project-modal" aria-hidden="true">
-      <div class="project-modal-overlay" data-close></div>
-      <div class="project-modal-content" role="dialog" aria-modal="true">
-        <button class="project-modal-close" aria-label="Close">×</button>
-        <div class="project-modal-body">
-          <img class="project-modal-thumb" src="" alt="Project image" />
-          <h3 class="project-modal-title"></h3>
-          <p class="project-modal-desc"></p>
-          <div class="project-modal-tech"></div>
-        </div>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Dzakir Tsabit Porto</p>
+    </div>
+  </footer>
+
+  <!-- Project detail modal -->
+  <div id="projectModal" class="project-modal" aria-hidden="true">
+    <div class="project-modal-overlay" data-close></div>
+    <div class="project-modal-content" role="dialog" aria-modal="true">
+      <button class="project-modal-close" aria-label="Close">×</button>
+      <div class="project-modal-body">
+        <img class="project-modal-thumb" src="" alt="Project image" />
+        <h3 class="project-modal-title"></h3>
+        <p class="project-modal-desc"></p>
+        <div class="project-modal-tech"></div>
       </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

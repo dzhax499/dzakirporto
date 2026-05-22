@@ -97,8 +97,24 @@
     }
 
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
+        color: #d70f0f;
+        position: relative;
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 5px;
+    }
+
+    header h1::before {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        background: #24283b;
+        color: #a9b1d6;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 13px;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     /* Navigation */
@@ -106,6 +122,7 @@
         list-style: none;
         display: flex;
         gap: 20px;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     nav ul li a {
@@ -138,12 +155,43 @@
     }
 
     .section-content {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 40px;
+        background: #1a1b26;
+        border-radius: 8px;
+        padding: 50px 40px 40px 40px;
         margin: 20px 0;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid #292e42;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .section-content::before {
+        content: 'dzakir@linux: ~/portfolio';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: #24283b;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cd0707;
+        font-size: 13px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        border-bottom: 1px solid #1f2335;
+    }
+
+    .section-content::after {
+        content: '—  ◻  ✕';
+        position: absolute;
+        top: 6px;
+        right: 15px;
+        color: #a9b1d6;
+        font-size: 14px;
+        letter-spacing: 6px;
     }
 
     h2 {
@@ -230,12 +278,41 @@
     }
 
     .project {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        padding: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: #1a1b26;
+        border-radius: 8px;
+        padding: 40px 30px 30px 30px;
+        border: 1px solid #292e42;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project::before {
+        content: '~/projects';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        background: #24283b;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #a9b1d6;
+        font-size: 11px;
+        font-family: 'Courier New', Courier, monospace;
+        border-bottom: 1px solid #1f2335;
+    }
+
+    .project::after {
+        content: '✕';
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        color: #ff5f56;
+        font-size: 12px;
     }
 
     /* Project thumbnail */
@@ -326,28 +403,44 @@
 
     .project-status {
         position: absolute;
-        top: 15px;
-        right: 15px;
-        padding: 5px 12px;
-        border-radius: 15px;
-        font-size: 0.85rem;
-        font-weight: 600;
+        top: 45px;
+        right: 30px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        text-transform: uppercase;
+        background: transparent;
+        padding: 0;
+        border: none;
+        letter-spacing: 1px;
+    }
+
+    .project-status::before {
+        content: '[ ';
+        color: #a9b1d6;
+    }
+
+    .project-status::after {
+        content: ' ]';
+        color: #a9b1d6;
     }
 
     .project.completed .project-status {
-        background: rgba(34, 197, 94, 0.2);
         color: #22c55e;
-        border: 1px solid rgba(34, 197, 94, 0.3);
     }
 
     .project.current .project-status {
-        background: rgba(249, 115, 22, 0.2);
-        color: #f97316;
-        border: 1px solid rgba(249, 115, 22, 0.3);
+        color: #eab308;
     }
 
     .project.current:hover .project-status {
-        animation: pulse 2s infinite;
+        animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
     }
 
     .project h3 {
@@ -524,23 +617,55 @@
         position: relative;
         max-width: 820px;
         width: calc(100% - 40px);
-        background: rgba(255, 255, 255, 0.06);
-        border-radius: 12px;
-        padding: 20px;
+        background: #1a1b26;
+        border-radius: 8px;
+        padding: 50px 20px 20px 20px;
         z-index: 1;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        border: 1px solid #292e42;
+    }
+
+    .project-modal-content::before {
+        content: 'dzakir@linux: ~/project-details';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: #24283b;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #a9b1d6;
+        font-size: 13px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        border-bottom: 1px solid #1f2335;
+    }
+
+    .project-modal-content::after {
+        content: '—  ◻';
+        position: absolute;
+        top: 6px;
+        right: 40px;
+        color: #a9b1d6;
+        font-size: 14px;
+        letter-spacing: 6px;
     }
 
     .project-modal-close {
         position: absolute;
-        right: 12px;
-        top: 8px;
+        right: 15px;
+        top: 6px;
         background: transparent;
         border: none;
-        color: #fff;
-        font-size: 28px;
+        color: #ff5f56;
+        font-size: 18px;
         line-height: 1;
         cursor: pointer;
+        z-index: 2;
     }
 
     .project-modal-body {
@@ -724,8 +849,22 @@
     .glow-blue {
         filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.8));
         transition: filter 0.3s ease;
+        animation: glow-pulse 3s infinite;
     }
 
     .glow-blue:hover {
         filter: drop-shadow(0 0 30px rgba(0, 255, 255, 1));
+        animation: none;
+    }
+
+    @keyframes glow-pulse {
+
+        0%,
+        100% {
+            filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.8));
+        }
+
+        50% {
+            filter: drop-shadow(0 0 30px rgba(0, 191, 255, 1));
+        }
     }
