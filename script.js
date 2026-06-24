@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = modal.querySelector('.project-modal-title');
   const modalDesc = modal.querySelector('.project-modal-desc');
   const modalTech = modal.querySelector('.project-modal-tech');
+  const modalLink = modal.querySelector('.project-modal-link');
 
   // placeholder image (SVG data URI)
   const placeholder = 'data:image/svg+xml;utf8,' + encodeURIComponent(
@@ -138,10 +139,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const techHtml = projectEl.querySelector('.project-tech')?.innerHTML || '';
     const imgEl = projectEl.querySelector('.project-thumb');
     const dataImage = imgEl ? imgEl.dataset.image : '';
+    const linkEl = projectEl.querySelector('.project-detail-link');
 
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
     modalTech.innerHTML = techHtml;
+
+    if (linkEl && modalLink) {
+      modalLink.href = linkEl.href;
+      modalLink.style.display = 'inline-block';
+    } else if (modalLink) {
+      modalLink.style.display = 'none';
+    }
 
     // set image with fallback on error
     modalThumb.src = dataImage || placeholder;
@@ -216,11 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        // Uncomment the next line if you want the animation to trigger only once
-        // observer.unobserve(entry.target);
-      } else {
-        // Remove 'active' if you want it to hide again when scrolling up
-        entry.target.classList.remove('active');
+        observer.unobserve(entry.target); // Trigger animation only once
       }
     });
   }, {

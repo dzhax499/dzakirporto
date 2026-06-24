@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Project Detail</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
       .project-detail { padding: 100px 20px 60px; min-height: 60vh; }
       .project-detail .back { display:inline-block; margin-bottom:18px; color:#00fff2; }
       .project-detail .meta { max-width:900px; margin: 0 auto; }
       .project-detail h1{ color:#fff; margin-bottom:12px; }
       .project-detail p{ color:#ddd; line-height:1.6; }
+      
+      /* Markdown Styles */
+      .markdown-content h1, .markdown-content h2, .markdown-content h3 { color: #fff; margin-top: 1.5em; margin-bottom: 0.5em; }
+      .markdown-content h1 { font-size: 2em; border-bottom: 1px solid #292e42; padding-bottom: 0.3em; }
+      .markdown-content h2 { font-size: 1.5em; border-bottom: 1px solid #292e42; padding-bottom: 0.3em; }
+      .markdown-content p { margin-bottom: 1em; }
+      .markdown-content a { color: #00fff2; text-decoration: none; }
+      .markdown-content a:hover { text-decoration: underline; }
+      .markdown-content ul, .markdown-content ol { margin-left: 20px; margin-bottom: 1em; color: #ddd; }
+      .markdown-content li { margin-bottom: 0.3em; }
+      .markdown-content code { background: #1a1b26; padding: 0.2em 0.4em; border-radius: 4px; font-family: monospace; color: #00fff2; font-size: 0.9em; }
+      .markdown-content pre { background: #1a1b26; padding: 1em; border-radius: 8px; overflow-x: auto; margin-bottom: 1em; border: 1px solid #292e42; }
+      .markdown-content pre code { background: transparent; padding: 0; color: #e2e8f0; }
+      .markdown-content blockquote { border-left: 4px solid #00fff2; padding-left: 1em; color: #a9b1d6; margin-left: 0; margin-bottom: 1em; background: rgba(0, 255, 242, 0.05); padding: 10px 15px; border-radius: 4px; }
+      .markdown-content img { max-width: 100%; border-radius: 8px; margin: 1em 0; }
     </style>
   </head>
   <body>
@@ -33,11 +49,16 @@
         <div class="meta">
           <img id="pd-image" src="" alt="Project image" style="width:100%;height:380px;object-fit:cover;border-radius:10px;background:#222;margin-bottom:16px;" />
           <h1 id="pd-title">Project Title</h1>
+          <div style="margin-bottom:12px;">
+            <a id="pd-source-btn" class="source-code-btn" href="#" target="_blank" style="display:none; text-decoration:none; padding:6px 12px; border-radius:12px; font-weight:bold; font-size:14px;">
+              &lt;/&gt; View Source Code
+            </a>
+          </div>
           <p id="pd-desc">Project description</p>
           <div id="pd-tech" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;"></div>
 
           <section id="pd-docs" style="margin-top:22px;color:#fff;">
-            <h2 style="margin-bottom:8px;color:#fff;">Documentation</h2>
+            <h2 id="pd-docs-title" style="margin-bottom:12px;color:#00fff2; border-bottom: 2px solid #292e42; padding-bottom: 8px;">README.md</h2>
             <div id="pd-doc-content" style="color:#ddd;">tes</div>
           </section>
         </div>
@@ -52,19 +73,23 @@
 
     <script>
       const PROJECTS = {
-        pemanfaatan: {
-          title: 'Pemanfaatan Aplikasi Perkantoran',
+        sudoku: {
+          title: 'Permainan Sudoku Terminal',
           image: 'img/projek/sudoku/Sudoku_Thumb.png',
-          desc: 'Project focused on utilizing office applications for business process automation. Create templates, macros, and automated workflows.',
-          tech: ['MS Excel','MS Word','MS PowerPoint','VBA'],
-          docs: '<p>Documentation placeholder. Add project goals, screenshots, setup, and notes here.</p>'
+          desc: 'Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C. Proyek ini dijalankan melalui terminal dengan berbagai level kesulitan.',
+          tech: ['C', 'CLI', 'Game Dev'],
+          github_readme: 'https://raw.githubusercontent.com/dzhax499/SudokuTUBESDDP/refs/heads/main/readme.md',
+          github_repo: 'https://github.com/dzhax499/SudokuTUBESDDP',
+          docs: '<p>Loading documentation from GitHub...</p>'
         },
-        library: {
-          title: 'Pengembangan Aplikasi Berbasis Library',
-          image: 'img/library.jpg',
-          desc: 'A library management application built using Java and libraries. Features: catalog, members, borrowing, reporting.',
-          tech: ['Java','Raylib','SDL3'],
-          docs: '<p>Documentation placeholder for library app: architecture, usage, endpoints, build steps.</p>'
+        tetris: {
+          title: 'Game Tetris (C & Raylib)',
+          image: 'img/projek/tetris/image.png',
+          desc: 'Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D.',
+          tech: ['C','Raylib','Game Dev'],
+          github_readme: 'https://raw.githubusercontent.com/dzhax499/TetrisGame-C4/main/README.md',
+          github_repo: 'https://github.com/dzhax499/TetrisGame-C4',
+          docs: '<p>Loading documentation from GitHub...</p>'
         },
         webapp: {
           title: 'Pengembangan Aplikasi Berbasis Website',
@@ -93,10 +118,12 @@
         const desc = document.getElementById('pd-desc');
         const tech = document.getElementById('pd-tech');
         const docs = document.getElementById('pd-doc-content');
+        const sourceBtn = document.getElementById('pd-source-btn');
 
         if (!data) {
           title.textContent = 'Project not found';
           desc.textContent = 'The requested project does not exist yet.';
+          sourceBtn.style.display = 'none';
           fallbackImage(img);
           return;
         }
@@ -105,6 +132,13 @@
         desc.textContent = data.desc;
         img.src = data.image || '';
         img.onerror = () => fallbackImage(img);
+
+        if (data.github_repo) {
+          sourceBtn.href = data.github_repo;
+          sourceBtn.style.display = 'inline-block';
+        } else {
+          sourceBtn.style.display = 'none';
+        }
 
         tech.innerHTML = '';
         (data.tech || []).forEach(t => {
@@ -115,6 +149,22 @@
         });
 
         docs.innerHTML = data.docs || '<p>No documentation yet.</p>';
+
+        if (data.github_readme) {
+          fetch(data.github_readme)
+            .then(res => {
+              if (!res.ok) throw new Error('Network response was not ok');
+              return res.text();
+            })
+            .then(text => {
+              // Parse markdown correctly using marked.js
+              const html = marked.parse(text);
+              docs.innerHTML = '<div class="markdown-content">' + html + '</div>';
+            })
+            .catch(err => {
+              docs.innerHTML = '<p>Dokumentasi README belum tersedia atau repositori private.</p>';
+            });
+        }
       }
 
       populate();
