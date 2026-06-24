@@ -169,3 +169,64 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay.addEventListener('click', closeModal);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 })();
+
+// Parallax and 3D effects
+(function(){
+  const parallaxBg = document.querySelectorAll('.parallax-bg');
+
+  // Scroll parallax for background elements
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    
+    parallaxBg.forEach(el => {
+      const speed = el.getAttribute('data-speed') || 2;
+      el.style.transform = `translateY(${scrollY * speed * 0.1}px)`;
+    });
+  }, { passive: true });
+
+  // 3D Tilt effect for project cards
+  const cards = document.querySelectorAll('.project');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -10; // Max 10 deg tilt
+      const rotateY = ((x - centerX) / centerX) * 10;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      card.style.transition = 'none';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+    });
+  });
+})();
+
+// Scroll Reveal Animation
+(function(){
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Uncomment the next line if you want the animation to trigger only once
+        // observer.unobserve(entry.target);
+      } else {
+        // Remove 'active' if you want it to hide again when scrolling up
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+})();

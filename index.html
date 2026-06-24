@@ -24,18 +24,24 @@
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#connect">Connect</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="nav-highlight">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="about">
-      <div class="container-horizontal">
-        <div class="section-content">
+    <section id="about" class="relative">
+      <!-- Parallax Background Elements -->
+      <div class="parallax-bg absolute top-20 left-10 w-24 h-24 rounded-full border border-cyan-500/30 hidden md:block" data-speed="-3"></div>
+      <div class="parallax-bg absolute bottom-20 right-10 w-32 h-32 rounded-full border border-red-500/20 hidden md:block" data-speed="4"></div>
+      <div class="parallax-bg absolute top-1/2 right-1/4 w-16 h-16 rounded-sm border border-green-500/30 rotate-45 hidden md:block" data-speed="2"></div>
+      <div class="parallax-bg absolute bottom-1/4 left-1/4 w-12 h-12 rounded-sm border border-yellow-500/30 rotate-12 hidden md:block" data-speed="-2"></div>
+
+      <div class="container-horizontal relative z-10">
+        <div class="section-content reveal">
           <div class="profile-img">
-            <img src="profile1-almet-transparent.png" alt="Dzakir Tsabit" class="glow-blue" />
+            <img src="profile1-almet-transparent.png" alt="Dzakir Tsabit" class="glow-blue drop-shadow-[0_0_15px_rgba(0,255,242,0.5)]" />
           </div>
           <div class="about-text"
             style="font-family: 'Courier New', Courier, monospace; text-align: left; text-shadow: none; font-size: 1.05rem; line-height: 1.6;">
@@ -128,9 +134,9 @@
 
     <section id="projects">
       <div class="container">
-        <h2>My Projects</h2>
+        <h2 class="reveal">My Projects</h2>
         <div class="projects-grid">
-          <div class="project completed pot">
+          <div class="project completed pot reveal">
             <img class="project-thumb" src="img/projek/sudoku/Sudoku_Thumb.png"
               data-image="img/projek/sudoku/Sudoku_Thumb.png" alt="Permainan Sudoku Terminal" />
             <div class="project-status">Completed</div>
@@ -146,7 +152,7 @@
             <a class="project-detail-link" href="project.html?id=pemanfaatan">View Details</a>
           </div>
 
-          <div class="project completed">
+          <div class="project completed reveal">
             <img class="project-thumb" data-image="img/library.jpg" alt="Pengembangan Aplikasi Berbasis Library" />
             <div class="project-status">Completed</div>
             <h3>Pengembangan Aplikasi Berbasis Library</h3>
@@ -164,7 +170,7 @@
             </div>
             <a class="project-detail-link" href="project.html?id=library">View Details</a>
           </div>
-          <div class="project completed">
+          <div class="project completed reveal">
             <img class="project-thumb" data-image="img/library.jpg" alt="Pengembangan Aplikasi Berbasis Library" />
             <div class="project-status">Completed</div>
             <h3>Pengembangan Aplikasi Berbasis Library</h3>
@@ -183,7 +189,7 @@
             <a class="project-detail-link" href="project.html?id=library">View Details</a>
           </div>
 
-          <div class="project current">
+          <div class="project current reveal">
             <img class="project-thumb" data-image="img/webapp.jpg" alt="Pengembangan Aplikasi Berbasis Website" />
             <div class="project-status">Currently Working</div>
             <h3>Pengembangan Aplikasi Berbasis Website</h3>
@@ -206,8 +212,8 @@
     </section>
     <section id="connect" class="connect">
       <div class="container">
-        <h2>Connect with Me</h2>
-        <div class="social-links">
+        <h2 class="reveal">Connect with Me</h2>
+        <div class="social-links reveal">
           <a href="https://www.facebook.com/daz.dzakir/" target="_blank" class="social-link">
             <i class="fa fa-facebook"></i>
           </a>
@@ -226,10 +232,10 @@
 
     <section id="contact">
       <div class="container">
-        <h2>Contact Me</h2>
+        <h2 class="reveal">Contact Me</h2>
         <div class="container">
-          <div class="social-links">
-            <a href="https://wa.me/6282119785325" target="_blank" class="social-link">
+          <div class="social-links reveal">
+            <a href="https://wa.me/62895352376780" target="_blank" class="social-link">
               <i class="fa fa-whatsapp"></i>
             </a>
             <a href="https://mail.google.com/mail/u/0/?to=dzdzakir@gmail.com&su=I%27m%20Visiting%20Your%20Web%20Porto%20!&body=Type%20your%20purpose...&fs=1&tf=cm"
