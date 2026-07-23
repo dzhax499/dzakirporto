@@ -58,7 +58,7 @@
           <div id="pd-tech" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;"></div>
 
           <section id="pd-docs" style="margin-top:22px;color:#fff;">
-            <h2 id="pd-docs-title" style="margin-bottom:12px;color:#00fff2; border-bottom: 2px solid #292e42; padding-bottom: 8px;">README.md</h2>
+            <h2 id="pd-docs-title" style="margin-bottom:12px;color:#00fff2; border-bottom: 2px solid #292e42; padding-bottom: 8px;">Documentation</h2>
             <div id="pd-doc-content" style="color:#ddd;">tes</div>
           </section>
         </div>
@@ -123,6 +123,239 @@
           tech: ['Roblox Studio', 'LUA', 'Game Dev'],
           github_repo: 'https://www.roblox.com/games/73622901744147/Bloxantara-Defense',
           docs: '<p>Mainkan gamenya langsung di Roblox melalui link <a href="https://www.roblox.com/games/73622901744147/Bloxantara-Defense" target="_blank" style="color: #00fff2;">di sini</a>.</p> <br> <h3>Gameplay Video:</h3> <p><em>(Nanti kita tambahkan video gameplay di sini)</em></p>'
+        },
+        ocr_wa: {
+          title: 'OCR WhatsApp Donation Automation',
+          image: 'img/projek/ocr-wa/thumbnail.png',
+          desc: 'Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.',
+          tech: ['n8n', 'Python', 'Docker', 'WhatsApp API'],
+          raw_markdown: `
+# 📄 OCR WhatsApp Donation Automation
+
+> Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.
+
+**Status:** ✅ Completed (Maret 2026)
+
+## 📌 Overview
+
+Project ini dibuat untuk mengurangi proses verifikasi donasi yang sebelumnya dilakukan secara manual.
+
+Pengguna cukup mengirimkan screenshot bukti transfer melalui WhatsApp. Sistem akan membaca isi gambar menggunakan OCR, mengekstrak informasi penting, kemudian melakukan validasi dan melanjutkan percakapan secara otomatis.
+
+Workflow ini dibangun menggunakan **n8n**, **Python**, dan **Docker**, sehingga mudah di-deploy dan dikembangkan lebih lanjut.
+
+---
+
+## ✨ Features
+
+* 📷 OCR otomatis dari screenshot bukti transfer
+* 🤖 AI Parsing untuk membaca informasi transaksi
+* 💰 Deteksi nominal transfer
+* 👤 Identifikasi nama pengirim
+* 🔍 Validasi data transaksi
+* 💬 Chatbot WhatsApp otomatis
+* 📋 Meminta pilihan program donasi
+* 🆔 Input kode relawan (opsional)
+* 🗄️ Penyimpanan data donatur
+* ⚙️ Workflow otomatis tanpa intervensi manual
+
+---
+
+## 🔄 Workflow
+
+\`\`\`text
+User
+ │
+ ▼
+Mengirim Screenshot Transfer
+ │
+ ▼
+WhatsApp API / WAHA
+ │
+ ▼
+n8n Webhook
+ │
+ ▼
+OCR Processing (Python)
+ │
+ ▼
+Extract:
+- Nama
+- Nominal
+- Informasi Transfer
+ │
+ ▼
+Validasi Data
+ │
+ ▼
+Chatbot WhatsApp
+ │
+ ├── Pilih Program Donasi
+ ├── Input Kode Relawan
+ └── Konfirmasi Donasi
+ │
+ ▼
+Database
+\`\`\`
+
+![Full Workflow](img/projek/ocr-wa/full-workflow.png)
+
+---
+
+# 📸 Example Conversation
+
+### 1. User mengirim bukti transfer
+
+\`\`\`
+📷 Screenshot Transfer
+\`\`\`
+
+↓
+
+### 2. Sistem membaca gambar
+
+\`\`\`
+Sedang memvalidasi...
+\`\`\`
+
+↓
+
+### 3. OCR berhasil
+
+\`\`\`
+Nama : Dzakir Tsabit
+Nominal : Rp10.001
+\`\`\`
+
+↓
+
+### 4. Bot meminta pilihan program
+
+\`\`\`
+Pilih Program Donasi
+
+1. Infaq
+2. Infaq Al Quran
+3. Infaq Ambulance
+...
+\`\`\`
+
+↓
+
+### 5. User memilih program
+
+\`\`\`
+2
+\`\`\`
+
+↓
+
+### 6. Bot meminta kode relawan
+
+\`\`\`
+Masukkan kode relawan
+atau '-' jika tidak ada
+\`\`\`
+
+↓
+
+### 7. Konfirmasi
+
+\`\`\`
+Data berhasil dicatat.
+
+Order ID :
+JLNML-20260320-XXXX
+\`\`\`
+
+---
+
+# 🛠 Tech Stack
+
+| Technology      | Purpose                  |
+| --------------- | ------------------------ |
+| 🟢 n8n          | Workflow Automation      |
+| 🐍 Python       | OCR Processing & Parsing |
+| 🐳 Docker       | Deployment               |
+| 💬 WhatsApp API | Chat Automation          |
+| 🔍 OCR Engine   | Text Recognition         |
+| 🗄 Database     | Donor Storage            |
+
+---
+
+# 🎯 Challenges
+
+Selama pengembangan, terdapat beberapa tantangan seperti:
+
+* OCR harus mampu membaca berbagai format screenshot bank.
+* Format bukti transfer berbeda-beda antar bank.
+* Nominal dan nama pengirim sering memiliki tata letak yang tidak konsisten.
+* Workflow harus mampu menangani berbagai kondisi error tanpa menghentikan proses otomatis.
+* Memastikan percakapan WhatsApp tetap berjalan meskipun terdapat data yang kurang lengkap.
+
+---
+
+# 💡 Solution
+
+Beberapa solusi yang diterapkan:
+
+* Parsing hasil OCR menggunakan Python.
+* Validasi hasil ekstraksi sebelum diproses ke tahap berikutnya.
+* Penggunaan branching pada n8n untuk menangani berbagai skenario.
+* Otomatisasi percakapan berdasarkan hasil OCR dan input pengguna.
+* Logging pada setiap tahapan workflow untuk memudahkan debugging.
+
+---
+
+# 📈 Result
+
+* Mengurangi proses input data secara manual.
+* Mempercepat verifikasi bukti transfer.
+* Mengurangi potensi human error.
+* Seluruh proses berjalan otomatis mulai dari upload bukti transfer hingga pencatatan data donasi.
+
+---
+
+# 🧠 Architecture
+
+\`\`\`
+WhatsApp
+     │
+     ▼
+ WhatsApp API
+     │
+     ▼
+    n8n
+     │
+ ┌───┴─────────────┐
+ │                 │
+ ▼                 ▼
+OCR Python     Validation
+ │                 │
+ └──────┬──────────┘
+        ▼
+ Conversation Logic
+        │
+        ▼
+ Database
+\`\`\`
+
+---
+
+# 📂 Project Highlights
+
+* Workflow terdiri dari puluhan node automation di n8n.
+* OCR mampu membaca screenshot transfer dari berbagai bank.
+* Percakapan WhatsApp bersifat dinamis berdasarkan hasil OCR.
+* Sistem dapat menangani validasi data sebelum disimpan.
+* Dibangun menggunakan arsitektur yang modular sehingga mudah dikembangkan untuk kebutuhan bisnis lainnya.
+
+---
+
+## 📷 Portfolio Note
+
+> Karena project ini dikerjakan pada **Maret 2026**, beberapa screenshot hasil percakapan WhatsApp dan file pendukung sudah tidak tersedia. Dokumentasi yang ditampilkan merupakan rekonstruksi berdasarkan workflow dan hasil implementasi asli, sehingga tetap merepresentasikan fungsi serta alur kerja sistem yang dikembangkan.
+`
         }
       };
 
@@ -190,6 +423,9 @@
             .catch(err => {
               docs.innerHTML = '<p>Dokumentasi README belum tersedia atau repositori private.</p>';
             });
+        } else if (data.raw_markdown) {
+          const html = marked.parse(data.raw_markdown);
+          docs.innerHTML = '<div class="markdown-content">' + html + '</div>';
         }
       }
 
