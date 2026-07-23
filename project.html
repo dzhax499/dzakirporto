@@ -35,9 +35,12 @@
         <h1>Dzakir Tsabit</h1>
         <nav class="nav-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="./" data-id="Beranda" data-en="Home">Beranda</a></li>
+            <li><a href="./#projects" data-id="Projek" data-en="Projects">Projek</a></li>
+            <li><a href="./#contact" data-id="Kontak" data-en="Contact">Kontak</a></li>
+            <li class="lang-switch-container">
+              <span class="lang-opt" data-lang="id">ID</span> <span style="color:#00fff2;opacity:0.5;">|</span> <span class="lang-opt" data-lang="en">EN</span>
+            </li>
           </ul>
         </nav>
       </div>
@@ -45,20 +48,21 @@
 
     <main class="project-detail">
       <div class="container">
-        <a class="back" href="index.html">Back to projects</a>
+        <a class="back" href="./#projects" data-id="Kembali ke projek" data-en="Back to projects">Kembali ke projek</a>
         <div class="meta">
           <img id="pd-image" src="" alt="Project image" style="width:100%;height:380px;object-fit:cover;border-radius:10px;background:#222;margin-bottom:16px;" />
           <h1 id="pd-title">Project Title</h1>
           <div style="margin-bottom:12px;">
             <a id="pd-source-btn" class="source-code-btn" href="#" target="_blank" style="display:none; text-decoration:none; padding:6px 12px; border-radius:12px; font-weight:bold; font-size:14px;">
-              &lt;/&gt; View Source Code
+              &lt;/&gt; <span data-id="Lihat Source Code" data-en="View Source Code">Lihat Source Code</span>
             </a>
           </div>
           <p id="pd-desc">Project description</p>
           <div id="pd-tech" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;"></div>
 
           <section id="pd-docs" style="margin-top:22px;color:#fff;">
-            <h2 id="pd-docs-title" style="margin-bottom:12px;color:#00fff2; border-bottom: 2px solid #292e42; padding-bottom: 8px;">Documentation</h2>
+            <h2 id="pd-docs-title" style="margin-bottom:12px;color:#00fff2; border-bottom: 2px solid #292e42; padding-bottom: 8px;" data-id="Dokumentasi" data-en="Documentation">Dokumentasi</h2>
+            <p id="pd-readme-info" style="display:none; font-size: 0.9em; color: #a9b1d6; margin-bottom: 15px; font-style: italic; background: rgba(0,255,242,0.05); padding: 8px 12px; border-left: 3px solid #00fff2; border-radius: 4px;" data-id="* Isi dokumentasi di bawah ini ditampilkan langsung dari berkas README asli projek." data-en="* The documentation content below is displayed directly from the project's original README file."></p>
             <div id="pd-doc-content" style="color:#ddd;">tes</div>
           </section>
         </div>
@@ -67,7 +71,7 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2024 Dzakir Tsabit</p>
+        <p data-id="&copy; 2026 Portofolio Dzakir Tsabit" data-en="&copy; 2026 Dzakir Tsabit Portfolio">&copy; 2026 Portofolio Dzakir Tsabit</p>
       </div>
     </footer>
 
@@ -77,6 +81,8 @@
           title: 'Permainan Sudoku Terminal',
           image: 'img/projek/sudoku/Sudoku_Thumb.png',
           desc: 'Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C. Proyek ini dijalankan melalui terminal dengan berbagai level kesulitan.',
+          title_en: 'Terminal Sudoku Game',
+          desc_en: 'Sudoku Game is a project from Basic Programming (DDP) course using C language. This project is run via terminal with various difficulty levels.',
           tech: ['C', 'CLI', 'Game Dev'],
           github_readme: 'https://raw.githubusercontent.com/dzhax499/SudokuTUBESDDP/refs/heads/main/readme.md',
           github_repo: 'https://github.com/dzhax499/SudokuTUBESDDP',
@@ -86,6 +92,8 @@
           title: 'Game Tetris (C & Raylib)',
           image: 'img/projek/tetris/image.png',
           desc: 'Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D.',
+          title_en: 'Tetris Game (C & Raylib)',
+          desc_en: 'Recreation of the classic Tetris game using C programming language and Raylib framework. This project demonstrates basic game logic implementation, matrix manipulation for grid, collision detection, and 2D graphics rendering.',
           tech: ['C','Raylib','Game Dev'],
           github_readme: 'https://raw.githubusercontent.com/dzhax499/TetrisGame-C4/main/README.md',
           github_repo: 'https://github.com/dzhax499/TetrisGame-C4',
@@ -95,6 +103,8 @@
           title: 'Game Turn-Based',
           image: 'img/projek/turnbase/image.png',
           desc: 'Proyek game turn-based yang menampilkan mekanik permainan giliran, strategi, dan rendering menggunakan grafis.',
+          title_en: 'Turn-Based Game',
+          desc_en: 'A turn-based game project featuring turn mechanics, strategy, and rendering using graphics.',
           tech: ['Java','Maven','Game Dev'],
           github_readme: 'https://raw.githubusercontent.com/dzhax499/TurnBaseGameJava/refs/heads/main/README.md',
           github_repo: 'https://github.com/dzhax499/TurnBaseGameJava',
@@ -104,6 +114,8 @@
           title: 'Pengembangan Aplikasi Berbasis Website',
           image: 'img/webapp.jpg',
           desc: 'Web application using modern web technologies: responsive UI and backend functionality.',
+          title_en: 'Website Based Application Development',
+          desc_en: 'Web application using modern web technologies: responsive UI and backend functionality.',
           tech: ['HTML/CSS','JavaScript','PHP','MySQL'],
           docs: '<p>Documentation placeholder: features, deployment, API docs, database schema.</p>'
         },
@@ -111,6 +123,8 @@
           title: 'SiDoRa (Sistem Dokumen Dosen)',
           image: 'img/projek/web-manajemen-dosen/sidora-web-manajemen.png',
           desc: 'Aplikasi Manajemen Dokumen Dosen (SiDoRa) yang memudahkan dosen dan Tata Usaha (TU) dalam mengelola dan memonitor dokumen resmi secara terpusat.',
+          title_en: 'SiDoRa (Lecturer Document System)',
+          desc_en: 'Lecturer Document Management Application (SiDoRa) that facilitates lecturers and administration staff (TU) in managing and monitoring official documents centrally.',
           tech: ['Web Development', 'System Management'],
           github_readme: 'https://raw.githubusercontent.com/C1-Proyek3-Apk-Manajemen-Adm-Dosen/devOps/refs/heads/main/README.md',
           github_repo: 'https://github.com/dzhax499/manajemen-dok-dosen/tree/develop',
@@ -120,6 +134,8 @@
           title: 'Bloxantara Defense',
           image: 'img/projek/bloxantara/thumbnail.png',
           desc: 'Sebuah game pertahanan strategis seru yang dikembangkan di platform Roblox bernama Bloxantara Defense.',
+          title_en: 'Bloxantara Defense',
+          desc_en: 'A fun strategic defense game developed on the Roblox platform named Bloxantara Defense.',
           tech: ['Roblox Studio', 'LUA', 'Game Dev'],
           github_repo: 'https://www.roblox.com/games/73622901744147/Bloxantara-Defense',
           docs: '<p>Mainkan gamenya langsung di Roblox melalui link <a href="https://www.roblox.com/games/73622901744147/Bloxantara-Defense" target="_blank" style="color: #00fff2;">di sini</a>.</p> <br> <h3>Gameplay Video:</h3> <p><em>(Nanti kita tambahkan video gameplay di sini)</em></p>'
@@ -128,6 +144,8 @@
           title: 'OCR WhatsApp Donation Automation',
           image: 'img/projek/ocr-wa/thumbnail.png',
           desc: 'Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.',
+          title_en: 'OCR WhatsApp Donation Automation',
+          desc_en: 'An OCR WhatsApp automation system to automatically process donation transfer receipts using AI and workflow automation.',
           tech: ['n8n', 'Python', 'Docker', 'WhatsApp API'],
           raw_markdown: `
 # 📄 OCR WhatsApp Donation Automation
@@ -378,17 +396,19 @@ OCR Python     Validation
         const tech = document.getElementById('pd-tech');
         const docs = document.getElementById('pd-doc-content');
         const sourceBtn = document.getElementById('pd-source-btn');
+        const readmeInfo = document.getElementById('pd-readme-info');
 
+        let currentLang = localStorage.getItem('lang') || 'en';
         if (!data) {
-          title.textContent = 'Project not found';
-          desc.textContent = 'The requested project does not exist yet.';
+          title.textContent = currentLang === 'id' ? 'Projek tidak ditemukan' : 'Project not found';
+          desc.textContent = currentLang === 'id' ? 'Projek yang diminta belum ada.' : 'The requested project does not exist yet.';
           sourceBtn.style.display = 'none';
           fallbackImage(img);
           return;
         }
 
-        title.textContent = data.title;
-        desc.textContent = data.desc;
+        title.textContent = currentLang === 'id' ? data.title : (data.title_en || data.title);
+        desc.textContent = currentLang === 'id' ? data.desc : (data.desc_en || data.desc);
         img.src = data.image || '';
         img.onerror = () => fallbackImage(img);
 
@@ -406,6 +426,12 @@ OCR Python     Validation
           s.textContent = t;
           tech.appendChild(s);
         });
+
+        if (data.github_readme || data.raw_markdown) {
+          readmeInfo.style.display = 'block';
+        } else {
+          readmeInfo.style.display = 'none';
+        }
 
         docs.innerHTML = data.docs || '<p>No documentation yet.</p>';
 
@@ -430,6 +456,11 @@ OCR Python     Validation
       }
 
       populate();
+      
+      document.addEventListener('langChanged', (e) => {
+        populate();
+      });
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

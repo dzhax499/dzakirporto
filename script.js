@@ -235,3 +235,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 })();
+
+// Language Switcher Logic
+(function(){
+  const langOpts = document.querySelectorAll('.lang-opt');
+  if (langOpts.length === 0) return;
+
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  function applyLanguage() {
+    langOpts.forEach(opt => {
+      if (opt.dataset.lang === currentLang) {
+        opt.classList.add('active');
+      } else {
+        opt.classList.remove('active');
+      }
+    });
+    
+    document.querySelectorAll('[data-id][data-en]').forEach(el => {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+         el.placeholder = currentLang === 'id' ? el.dataset.id : el.dataset.en;
+      } else {
+         el.innerHTML = currentLang === 'id' ? el.dataset.id : el.dataset.en;
+      }
+    });
+    
+    // trigger custom event for project.html to know when to re-render
+    document.dispatchEvent(new CustomEvent('langChanged', { detail: currentLang }));
+  }
+
+  langOpts.forEach(opt => {
+    opt.addEventListener('click', () => {
+      currentLang = opt.dataset.lang;
+      localStorage.setItem('lang', currentLang);
+      applyLanguage();
+    });
+  });
+
+  applyLanguage();
+})();
+

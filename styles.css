@@ -1018,3 +1018,7 @@
             filter: drop-shadow(0 0 30px rgba(0, 191, 255, 1));
         }
     }
+.lang-switch-container { color: #00fff2; font-family: 'Courier New', Courier, monospace; font-weight: bold; display: flex; align-items: center; gap: 8px; margin-left: 10px; }
+.lang-opt { cursor: pointer; opacity: 0.5; transition: all 0.3s; padding: 4px; }
+.lang-opt.active { opacity: 1; text-shadow: 0 0 10px #00fff2; }
+.lang-opt:hover { opacity: 1; }

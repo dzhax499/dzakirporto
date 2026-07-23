@@ -21,12 +21,15 @@
       </button>
       <nav class="nav-menu">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#connect">Connect</a></li>
+          <li><a href="#about" data-id="Tentang" data-en="About">Tentang</a></li>
+          <li><a href="#projects" data-id="Projek" data-en="Projects">Projek</a></li>
+          <li><a href="#connect" data-id="Sosmed" data-en="Connect">Sosmed</a></li>
           <li class="relative">
-            <a href="#contact" class="nav-highlight">Contact</a>
+            <a href="#contact" class="nav-highlight" data-id="Kontak" data-en="Contact">Kontak</a>
             <img src="img/mouse-clicked-transparent.png" alt="Click here" class="absolute -bottom-8 -right-8 w-12 h-auto pointer-events-none drop-shadow-lg z-50 animate-bounce" style="background: transparent;" />
+          </li>
+          <li class="lang-switch-container">
+            <span class="lang-opt" data-lang="id">ID</span> <span style="color:#00fff2;opacity:0.5;">|</span> <span class="lang-opt" data-lang="en">EN</span>
           </li>
         </ul>
       </nav>
@@ -53,25 +56,22 @@
 
             <div class="mb-3 flex items-start">
               <span class="text-red-500 font-bold w-24 shrink-0">Whoami:</span>
-              <span class="text-gray-300">Hello! I'm <strong class="text-red-500">Dzakir Tsabit</strong>, a passionate
-                Informatics Engineering student at Bandung State Polytechnic (Polban).</span>
+              <span class="text-gray-300"><span data-id="Halo! Saya " data-en="Hello! I'm ">Halo! Saya </span><strong class="text-red-500">Dzakir Tsabit</strong><span data-id=", mahasiswa Teknik Informatika di Politeknik Negeri Bandung (Polban)." data-en=", a passionate Informatics Engineering student at Bandung State Polytechnic (Polban).">, mahasiswa Teknik Informatika di Politeknik Negeri Bandung (Polban).</span></span>
             </div>
 
             <div class="mb-3 flex items-start">
               <span class="text-red-500 font-bold w-24 shrink-0">Current:</span>
-              <span class="text-gray-300">Currently in my 4rd semester, I'm diving deep into the world of programming
-                and technology.</span>
+              <span class="text-gray-300" data-id="Saat ini di semester 4, saya mendalami dunia pemrograman dan teknologi." data-en="Currently in my 4th semester, I'm diving deep into the world of programming and technology.">Saat ini di semester 4, saya mendalami dunia pemrograman dan teknologi.</span>
             </div>
 
             <div class="mb-3 flex items-start">
               <span class="text-red-500 font-bold w-24 shrink-0">Passion:</span>
-              <span class="text-gray-300">I love solving problems through code and creating innovative solutions.</span>
+              <span class="text-gray-300" data-id="Saya suka memecahkan masalah melalui kode dan menciptakan solusi inovatif." data-en="I love solving problems through code and creating innovative solutions.">Saya suka memecahkan masalah melalui kode dan menciptakan solusi inovatif.</span>
             </div>
 
             <div class="mb-3 flex items-start">
               <span class="text-red-500 font-bold w-24 shrink-0">Journey:</span>
-              <span class="text-gray-300">My journey in informatics has been exciting, and I'm always eager to learn new
-                technologies and improve my skills.</span>
+              <span class="text-gray-300" data-id="Perjalanan saya di bidang informatika sangat menyenangkan, dan saya selalu bersemangat mempelajari teknologi baru dan meningkatkan kemampuan saya." data-en="My journey in informatics has been exciting, and I'm always eager to learn new technologies and improve my skills.">Perjalanan saya di bidang informatika sangat menyenangkan, dan saya selalu bersemangat mempelajari teknologi baru dan meningkatkan kemampuan saya.</span>
             </div>
 
             <div class="mt-6 flex">
@@ -97,7 +97,7 @@
           </div>
         </div>
         <div class="skills mt-12 w-full">
-          <h3 class="text-center text-2xl font-bold mb-8 text-white reveal">Skills & Technologies</h3>
+          <h3 class="text-center text-2xl font-bold mb-8 text-white reveal" data-id="Keahlian & Teknologi" data-en="Skills & Technologies">Keahlian & Teknologi</h3>
           <div class="skills-grid reveal">
             
             <div class="skill-category">
@@ -196,14 +196,14 @@
 
     <section id="projects">
       <div class="container">
-        <h2 class="reveal">My Projects</h2>
+        <h2 class="reveal" data-id="Projek Saya" data-en="My Projects">Projek Saya</h2>
         <div class="projects-grid">
           <div class="project completed pot reveal">
             <img class="project-thumb" src="img/projek/sudoku/Sudoku_Thumb.png"
               data-image="img/projek/sudoku/Sudoku_Thumb.png" alt="Permainan Sudoku Terminal" />
             <div class="project-status">Completed</div>
-            <h3>Permainan Sudoku Terminal</h3>
-            <p>
+            <h3 data-id="Permainan Sudoku Terminal" data-en="Terminal Sudoku Game">Permainan Sudoku Terminal</h3>
+            <p data-id="Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C" data-en="Sudoku Game is a project from Basic Programming (DDP) course using C language">
               Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C
             </p>
             <div class="project-tech">
@@ -217,8 +217,8 @@
           <div class="project completed reveal">
             <img class="project-thumb" src="img/projek/tetris/demo-video.gif" data-image="img/projek/tetris/demo-video.gif" alt="Game Tetris (C & Raylib)" />
             <div class="project-status">Completed</div>
-            <h3>Game Tetris (C & Raylib)</h3>
-            <p>
+            <h3 data-id="Game Tetris (C & Raylib)" data-en="Tetris Game (C & Raylib)">Game Tetris (C & Raylib)</h3>
+            <p data-id="Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D." data-en="Recreation of the classic Tetris game using C programming language and Raylib framework. This project demonstrates basic game logic implementation, matrix manipulation for grid, collision detection, and 2D graphics rendering.">
               Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D.
             </p>
             <div class="project-tech">
@@ -232,8 +232,8 @@
           <div class="project completed reveal">
             <img class="project-thumb" src="img/projek/turnbase/demo-appturnbase.gif" data-image="img/projek/turnbase/demo-appturnbase.gif" alt="Game Turn-Based" />
             <div class="project-status">Completed</div>
-            <h3>Game Turn-Based</h3>
-            <p>
+            <h3 data-id="Game Turn-Based" data-en="Turn-Based Game">Game Turn-Based</h3>
+            <p data-id="Proyek game turn-based yang menampilkan mekanik permainan giliran, strategi, dan interaksi yang menarik." data-en="A turn-based game project featuring turn mechanics, strategy, and engaging interactions.">
               Proyek game turn-based yang menampilkan mekanik permainan giliran, strategi, dan interaksi yang menarik.
             </p>
             <div class="project-tech">
@@ -246,8 +246,8 @@
           <div class="project completed reveal">
             <img class="project-thumb" src="img/projek/web-manajemen-dosen/sidora-web-manajemen.png" data-image="img/projek/web-manajemen-dosen/sidora-web-manajemen.png" alt="SiDoRa (Sistem Dokumen Dosen)" />
             <div class="project-status">Completed</div>
-            <h3>SiDoRa (Sistem Dokumen Dosen)</h3>
-            <p>
+            <h3 data-id="SiDoRa (Sistem Dokumen Dosen)" data-en="SiDoRa (Lecturer Document System)">SiDoRa (Sistem Dokumen Dosen)</h3>
+            <p data-id="Aplikasi Manajemen Dokumen Dosen (SiDoRa) yang memudahkan dosen dan Tata Usaha (TU) dalam mengelola dan memonitor dokumen resmi dan administrasi secara terpusat." data-en="Lecturer Document Management Application (SiDoRa) that facilitates lecturers and administration staff (TU) in managing and monitoring official documents and administration centrally.">
               Aplikasi Manajemen Dokumen Dosen (SiDoRa) yang memudahkan dosen dan Tata Usaha (TU) dalam mengelola dan memonitor dokumen resmi dan administrasi secara terpusat.
             </p>
             <div class="project-tech">
@@ -260,8 +260,8 @@
           <div class="project completed reveal">
             <img class="project-thumb" src="img/projek/bloxantara/thumbnail.png" data-image="img/projek/bloxantara/thumbnail.png" alt="Bloxantara Defense" />
             <div class="project-status">Completed</div>
-            <h3>Bloxantara Defense</h3>
-            <p>
+            <h3 data-id="Bloxantara Defense" data-en="Bloxantara Defense">Bloxantara Defense</h3>
+            <p data-id="Game pertahanan strategis yang dikembangkan di platform Roblox, memberikan pengalaman bermain yang seru dan menantang." data-en="A strategic defense game developed on the Roblox platform, providing a fun and challenging gameplay experience.">
               Game pertahanan strategis yang dikembangkan di platform Roblox, memberikan pengalaman bermain yang seru dan menantang.
             </p>
             <div class="project-tech">
@@ -275,8 +275,8 @@
           <div class="project completed reveal">
             <img class="project-thumb" src="img/projek/ocr-wa/thumbnail.png" data-image="img/projek/ocr-wa/thumbnail.png" alt="OCR WhatsApp Donation Automation" />
             <div class="project-status">Completed</div>
-            <h3>OCR WhatsApp Donation Automation</h3>
-            <p>
+            <h3 data-id="OCR WhatsApp Donation Automation" data-en="OCR WhatsApp Donation Automation">OCR WhatsApp Donation Automation</h3>
+            <p data-id="Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation." data-en="An OCR WhatsApp automation system to automatically process donation transfer receipts using AI and workflow automation.">
               Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.
             </p>
             <div class="project-tech">
@@ -291,7 +291,7 @@
     </section>
     <section id="connect" class="connect">
       <div class="container">
-        <h2 class="reveal">Connect with Me</h2>
+        <h2 class="reveal" data-id="Terhubung dengan Saya" data-en="Connect with Me">Terhubung dengan Saya</h2>
         <div class="social-links reveal">
           <a href="https://www.facebook.com/daz.dzakir/" target="_blank" class="social-link">
             <i class="fa fa-facebook"></i>
@@ -311,7 +311,7 @@
 
     <section id="contact">
       <div class="container">
-        <h2 class="reveal">Contact Me</h2>
+        <h2 class="reveal" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</h2>
         <div class="container">
           <div class="social-links reveal">
             <a href="https://wa.me/62895352376780" target="_blank" class="social-link">
@@ -329,7 +329,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Dzakir Tsabit Porto</p>
+      <p data-id="&copy; 2026 Portofolio Dzakir Tsabit" data-en="&copy; 2026 Dzakir Tsabit Portfolio">&copy; 2026 Portofolio Dzakir Tsabit</p>
     </div>
   </footer>
 
@@ -344,7 +344,7 @@
         <p class="project-modal-desc"></p>
         <div class="project-modal-tech"></div>
         <div style="text-align: right; margin-top: 25px;">
-          <a class="project-modal-link project-detail-link" href="#" style="display: inline-block;">View Full Details</a>
+          <a class="project-modal-link project-detail-link" href="#" style="display: inline-block;" data-id="Lihat Detail Penuh" data-en="View Full Details">Lihat Detail Penuh</a>
         </div>
       </div>
     </div>
