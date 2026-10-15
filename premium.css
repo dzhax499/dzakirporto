@@ -238,6 +238,13 @@ header { background: rgba(244, 244, 244, .94); }
 .social-icon .social-icon-dot { fill: currentColor; stroke: none; }
 .contact-phone { display: block; margin-top: 8px; font-size: 12px; color: #bdbdbd; }
 .contact-phone:hover { color: var(--accent); }
+.contact-telegram { font-size: 12px; border-bottom: 1px solid #bfbfbf; }
+.contact-telegram:hover { color: var(--paper); border-color: var(--paper); }
+.contact-details { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 8px; }
+.contact-detail { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; color: #e0e0e0; }
+.contact-detail:hover { color: var(--paper); }
+.contact-detail-icon { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 560px) { .contact-details { flex-direction: column; gap: 11px; } }
 .project[data-project="ocr_wa"] .project-thumb { object-position: center 82%; }
 .project[data-work-type="working"] .project-status { color: var(--paper); }
 .project.completed .project-status { color: #2f8f52; }

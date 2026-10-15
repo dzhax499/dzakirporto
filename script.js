@@ -161,6 +161,27 @@
   });
   applyLanguage();
 
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const recipient = link.getAttribute('href').replace('mailto:', '');
+      const subject = 'Kolaborasi dari Portfolio Dzakir Tsabit';
+      const body = `Halo Dzakir,
+
+Saya menemukan portfolio Anda dan ingin berdiskusi tentang:
+
+Nama:
+Kebutuhan atau proyek:
+Timeline:
+Anggaran (opsional):
+
+Terima kasih,
+[Nama Anda]`;
+      const gmailCompose = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(gmailCompose, '_blank', 'noopener,noreferrer');
+    });
+  });
+
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
