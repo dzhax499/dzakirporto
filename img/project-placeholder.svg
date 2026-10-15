@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Project preview</title>
+  <desc id="desc">A dark placeholder image for a project preview.</desc>
+  <rect width="1200" height="700" fill="#111827"/>
+  <path d="M0 560h1200" stroke="#164e63" stroke-width="2"/>
+  <path d="M120 560V170h960v390" fill="none" stroke="#22d3ee" stroke-width="8" opacity=".7"/>
+  <rect x="190" y="240" width="330" height="220" rx="12" fill="#1e293b" stroke="#334155" stroke-width="4"/>
+  <rect x="570" y="240" width="330" height="70" rx="12" fill="#1e293b" stroke="#334155" stroke-width="4"/>
+  <rect x="570" y="340" width="330" height="120" rx="12" fill="#1e293b" stroke="#334155" stroke-width="4"/>
+  <text x="600" y="205" fill="#67e8f9" font-family="monospace" font-size="34">WEB PROJECT</text>
+</svg>

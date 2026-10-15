@@ -1,50 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Project Detail</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="theme-color" content="#f4f4f4" />
+    <link rel="icon" type="image/png" href="img/me/Dzakir-Tsabit-DZ-Logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="premium.css" />
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-      .project-detail { padding: 100px 20px 60px; min-height: 60vh; }
-      .project-detail .back { display:inline-block; margin-bottom:18px; color:#00fff2; }
-      .project-detail .meta { max-width:900px; margin: 0 auto; }
-      .project-detail h1{ color:#fff; margin-bottom:12px; }
-      .project-detail p{ color:#ddd; line-height:1.6; }
-      
-      /* Markdown Styles */
-      .markdown-content h1, .markdown-content h2, .markdown-content h3 { color: #fff; margin-top: 1.5em; margin-bottom: 0.5em; }
-      .markdown-content h1 { font-size: 2em; border-bottom: 1px solid #292e42; padding-bottom: 0.3em; }
-      .markdown-content h2 { font-size: 1.5em; border-bottom: 1px solid #292e42; padding-bottom: 0.3em; }
-      .markdown-content p { margin-bottom: 1em; }
-      .markdown-content a { color: #00fff2; text-decoration: none; }
-      .markdown-content a:hover { text-decoration: underline; }
-      .markdown-content ul, .markdown-content ol { margin-left: 20px; margin-bottom: 1em; color: #ddd; }
-      .markdown-content li { margin-bottom: 0.3em; }
-      .markdown-content code { background: #1a1b26; padding: 0.2em 0.4em; border-radius: 4px; font-family: monospace; color: #00fff2; font-size: 0.9em; }
-      .markdown-content pre { background: #1a1b26; padding: 1em; border-radius: 8px; overflow-x: auto; margin-bottom: 1em; border: 1px solid #292e42; }
-      .markdown-content pre code { background: transparent; padding: 0; color: #e2e8f0; }
-      .markdown-content blockquote { border-left: 4px solid #00fff2; padding-left: 1em; color: #a9b1d6; margin-left: 0; margin-bottom: 1em; background: rgba(0, 255, 242, 0.05); padding: 10px 15px; border-radius: 4px; }
-      .markdown-content img { max-width: 100%; border-radius: 8px; margin: 1em 0; }
-    </style>
+
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Dzakir Tsabit</h1>
-        <nav class="nav-menu">
-          <ul>
-            <li><a href="./" data-id="Beranda" data-en="Home">Beranda</a></li>
-            <li><a href="./#projects" data-id="Projek" data-en="Projects">Projek</a></li>
-            <li><a href="./#contact" data-id="Kontak" data-en="Contact">Kontak</a></li>
-            <li class="lang-switch-container">
-              <span class="lang-opt" data-lang="id">ID</span> <span style="color:#00fff2;opacity:0.5;">|</span> <span class="lang-opt" data-lang="en">EN</span>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <header>
+    <div class="container header-inner">
+      <a class="brand-link" href="./" aria-label="Dzakir Tsabit — Beranda"><img class="brand-logo" src="img/me/Dzakir-Tsabit-DZ-Logo.png" alt="Logo DZ" width="84" height="56" /><span class="brand-name">Dzakir Tsabit<span>DEVELOPER PORTFOLIO</span></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span class="hamburger"></span></button>
+      <nav class="nav-menu" id="main-nav"><ul>
+        <li><a href="./#about" data-id="Tentang" data-en="About">Tentang</a></li>
+        <li><a href="./#projects" data-id="Projek" data-en="Projects">Projek</a></li>
+        <li><a href="./#connect" data-id="Terhubung" data-en="Connect">Terhubung</a></li>
+        <li class="lang-switch-container"><button class="lang-opt active" data-lang="id" aria-label="Bahasa Indonesia">ID</button><span>/</span><button class="lang-opt" data-lang="en" aria-label="English">EN</button></li>
+        <li><a href="./#contact" class="nav-highlight"><span data-id="Mari ngobrol" data-en="Let's talk">Mari ngobrol</span> ↗</a></li>
+      </ul></nav>
+    </div>
+  </header>
 
     <main class="project-detail">
       <div class="container">
@@ -53,17 +34,18 @@
           <img id="pd-image" src="" alt="Project image" style="width:100%;height:380px;object-fit:cover;border-radius:10px;background:#222;margin-bottom:16px;" />
           <h1 id="pd-title">Project Title</h1>
           <div style="margin-bottom:12px;">
-            <a id="pd-source-btn" class="source-code-btn" href="#" target="_blank" style="display:none; text-decoration:none; padding:6px 12px; border-radius:12px; font-weight:bold; font-size:14px;">
+            <a id="pd-source-btn" class="source-code-btn" href="#" target="_blank" rel="noopener noreferrer" style="display:none; text-decoration:none; padding:6px 12px; border-radius:12px; font-weight:bold; font-size:14px;">
               &lt;/&gt; <span data-id="Lihat Source Code" data-en="View Source Code">Lihat Source Code</span>
             </a>
+            <p id="pd-source-note" class="source-code-note" hidden></p>
           </div>
           <p id="pd-desc">Project description</p>
           <div id="pd-tech" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;"></div>
 
-          <section id="pd-docs" style="margin-top:22px;color:#fff;">
-            <h2 id="pd-docs-title" style="margin-bottom:12px;color:#00fff2; border-bottom: 2px solid #292e42; padding-bottom: 8px;" data-id="Dokumentasi" data-en="Documentation">Dokumentasi</h2>
-            <p id="pd-readme-info" style="display:none; font-size: 0.9em; color: #a9b1d6; margin-bottom: 15px; font-style: italic; background: rgba(0,255,242,0.05); padding: 8px 12px; border-left: 3px solid #00fff2; border-radius: 4px;" data-id="* Isi dokumentasi di bawah ini ditampilkan langsung dari berkas README asli projek." data-en="* The documentation content below is displayed directly from the project's original README file."></p>
-            <div id="pd-doc-content" style="color:#ddd;">tes</div>
+          <section id="pd-docs" style="margin-top:22px;">
+            <h2 id="pd-docs-title" style="margin-bottom:12px; padding-bottom:8px;" data-id="Dokumentasi" data-en="Documentation">Dokumentasi</h2>
+            <p id="pd-readme-info" style="display:none; font-size:0.9em; margin-bottom:15px; font-style:italic; padding:8px 12px; border-left:3px solid var(--accent); border-radius:4px;" data-id="* Isi dokumentasi di bawah ini ditampilkan langsung dari berkas README asli projek." data-en="* The documentation content below is displayed directly from the project's original README file."></p>
+            <div id="pd-doc-content"></div>
           </section>
         </div>
       </div>
@@ -77,12 +59,104 @@
 
     <script>
       const PROJECTS = {
+        machine_monitoring: {
+          title: 'Machine Monitoring Dashboard',
+          title_en: 'Machine Monitoring Dashboard',
+          image: 'img/projek/machine-monitoring/dashboard.png',
+          desc: 'Prototipe monitoring status dan durasi operasi mesin dengan riwayat pembacaan, pengingat perawatan, login email–OTP–PIN, dan ekspor laporan harian. Preview menggunakan data simulasi.',
+          desc_en: 'A machine status and runtime monitoring prototype with reading history, maintenance reminders, email–OTP–PIN login, and daily report exports. Preview uses simulated data.',
+          tech: ['Node.js', 'Fastify', 'PostgreSQL', 'Chart.js', 'Tailwind CSS'],
+          source_note: 'Source code proyek ini tidak dipublikasikan. Screenshot menampilkan antarmuka asli dengan data simulasi.',
+          source_note_en: 'This project\'s source code is not published. Screenshots show the original interface with simulated data.',
+          docs: `<div class="markdown-content machine-case">
+            <p>WORKING · MONITORING MESIN</p>
+            <p>Proyek masih dalam pengembangan dan belum selesai.</p>
+            <h2>Status mesin, riwayat, dan pengingat dalam satu tempat.</h2>
+            <p>Dashboard ini membantu pengguna membaca kondisi mesin, durasi operasional, dan pembacaan terbaru. Backend menggunakan Node.js, Fastify, dan PostgreSQL; antarmuka menggunakan Tailwind CSS dan Chart.js.</p>
+            <blockquote>Screenshot antarmuka diambil dari frontend asli dengan API fixture lokal dan data fiktif, berlabel SIMULASI PORTFOLIO. Screenshot laporan Excel ditambahkan dari file asli yang diberikan pemilik dan menampilkan Mesin Demo (simulasi). Tidak ada akses database operasional, pengiriman OTP, atau koneksi mesin fisik saat penyusunan dokumentasi ini.</blockquote>
+            <h3>Monitoring &amp; riwayat pembacaan</h3>
+            <p>Kartu ringkasan membedakan RUNNING, IDLE, OFF, dan NO_DATA. Grafik merangkum durasi tiap status, sementara tabel memperlihatkan waktu, nilai numerik, dan hasil klasifikasi. Nilai tanpa satuan tidak dilabeli sebagai arus atau energi karena karakteristik perangkat belum diverifikasi.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/status-history.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/status-history.png" alt="Status mesin, rekap harian, grafik durasi, dan tabel pembacaan dengan data simulasi" loading="lazy" width="1440" height="1200" /></a><figcaption>01 / Status dan riwayat — data simulasi. Klik gambar untuk memperbesar.</figcaption></figure>
+            <h3>Pengingat jam operasi &amp; komponen</h3>
+            <p>Pengguna dapat menentukan pesan dan ambang jam running. Pengingat menghitung waktu warming up dan loading work, bukan waktu mesin berhenti atau tanpa data. Tersedia pengingat komponen dan penandaan selesai; fitur ini bukan sistem inventaris stok.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/reminders.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/reminders.png" alt="Daftar dan form pengingat perawatan pada frontend asli" loading="lazy" width="1440" height="1200" /></a><figcaption>02 / Kelola pengingat dan form ambang jam operasi.</figcaption></figure>
+            <h3>Laporan harian</h3>
+            <p>Pemilihan periode dan format tersedia untuk Excel, PDF, CSV, dan TXT. Implementasi laporan memakai pembagian tanggal WIB dan pemotongan interval lintas tengah malam. Screenshot berikut memperlihatkan pilihan ekspor, bukan bukti pengujian unduhan pada backend live.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/export-options.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/export-options.png" alt="Dialog pemilihan periode dan format ekspor laporan mesin" loading="lazy" width="1440" height="1200" /></a><figcaption>03 / Pilihan ekspor laporan harian.</figcaption></figure>
+            <h3>Contoh hasil laporan Excel</h3>
+            <p>Laporan Mesin Demo menampilkan status beserta indikator warna, waktu dan tanggal mulai/selesai, serta durasi dalam detik dan format jam. Klik gambar untuk membaca tabel pada ukuran asli.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/foto-laporan-xlxs.jpg" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/foto-laporan-xlxs.jpg" alt="Laporan Excel Mesin Demo dengan status berwarna, waktu mulai dan selesai, serta durasi" loading="lazy" /></a><figcaption>04 / Screenshot laporan Excel (.xlsx) — Mesin Demo, 13 Oktober 2026.</figcaption></figure>
+            <h3>Akses email–OTP–PIN</h3>
+            <p>Source menyediakan alur login untuk email yang diberi akses, verifikasi OTP, dan PIN enam digit. Halaman masuk di bawah memakai alamat contoh; tidak ada email atau OTP sungguhan yang dikirim dalam pembuatan screenshot.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/login.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/login.png" alt="Halaman login Machine Monitoring dengan akun contoh" loading="lazy" width="1440" height="1200" /></a><figcaption>05 / Halaman login — akun contoh, bukan akun pengguna asli.</figcaption></figure>
+            <h3>Batas prototipe</h3>
+            <p>Integrasi fisik Kinco/M-IoT, satuan sensor, payload perangkat, serta kalibrasi threshold masih memerlukan verifikasi. Dokumentasi ini menunjukkan antarmuka dan fitur yang tersedia di source, bukan klaim sistem telah dipakai pada mesin produksi.</p>
+          </div>`,
+          docs_en: `<div class="markdown-content machine-case">
+            <p>WORKING · MACHINE MONITORING</p>
+            <p>This project is still in development and is not yet complete.</p>
+            <h2>Machine status, history, and reminders in one place.</h2>
+            <p>This dashboard helps users inspect machine conditions, operating durations, and recent readings. The backend uses Node.js, Fastify, and PostgreSQL; the frontend uses Tailwind CSS and Chart.js.</p>
+            <blockquote>Interface screenshots were captured from the original frontend using a local fixture API and fictional data, with a SIMULASI PORTFOLIO label. The Excel report screenshot was supplied by the owner and shows a simulated demo machine. No operational database, OTP email, or physical machine was accessed while preparing this documentation.</blockquote>
+            <h3>Monitoring &amp; reading history</h3>
+            <p>Summary cards distinguish RUNNING, IDLE, OFF, and NO_DATA. The chart summarizes duration per status, and the table shows timestamps, numeric values, and classifications. Values are not labeled as current or energy because device units remain unverified.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/status-history.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/status-history.png" alt="Machine status, daily summary, duration chart, and readings using simulated data" loading="lazy" width="1440" height="1200" /></a><figcaption>01 / Status and history — simulated data. Click to enlarge.</figcaption></figure>
+            <h3>Runtime &amp; component reminders</h3>
+            <p>Users can set a message and running-hours threshold. Reminders count warming-up and loading-work time, excluding stopped and no-data periods. Component reminders and completion tracking are available; this is not a stock inventory system.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/reminders.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/reminders.png" alt="Reminder list and maintenance reminder form in the original frontend" loading="lazy" width="1440" height="1200" /></a><figcaption>02 / Reminder management and runtime threshold form.</figcaption></figure>
+            <h3>Daily reports</h3>
+            <p>The interface offers period selection and Excel, PDF, CSV, and TXT formats. Report code groups dates in Western Indonesian Time and splits intervals across midnight. The screenshot shows export options, not a live-backend download test.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/export-options.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/export-options.png" alt="Machine report export dialog with period and format controls" loading="lazy" width="1440" height="1200" /></a><figcaption>03 / Daily report export options.</figcaption></figure>
+            <h3>Example Excel report output</h3>
+            <p>The demo machine report includes color-coded statuses, start/end dates and times, and durations in seconds and time format. Click the screenshot to read the table at its original size.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/foto-laporan-xlxs.jpg" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/foto-laporan-xlxs.jpg" alt="Demo machine Excel report with color-coded statuses, start and end times, and durations" loading="lazy" /></a><figcaption>04 / Excel report screenshot (.xlsx) — demo machine, 13 October 2026.</figcaption></figure>
+            <h3>Email–OTP–PIN access</h3>
+            <p>The source provides allowlisted-email login, OTP verification, and a six-digit PIN. The login screenshot uses an example address; no actual email or OTP was sent while preparing these screenshots.</p>
+            <figure class="case-figure"><a href="img/projek/machine-monitoring/login.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/machine-monitoring/login.png" alt="Machine Monitoring login page using an example account" loading="lazy" width="1440" height="1200" /></a><figcaption>05 / Login page — example account, not a real user account.</figcaption></figure>
+            <h3>Prototype limitations</h3>
+            <p>Physical Kinco/M-IoT integration, sensor units, device payloads, and threshold calibration still require verification. This case study presents the interface and source-code features, not a claim of deployment on production machinery.</p>
+          </div>`
+        },
+        cashflow_telegram: {
+          title: 'CashFlow Telegram Transaction Notifier',
+          title_en: 'CashFlow Telegram Transaction Notifier',
+          image: 'img/projek/cashflow-telegram/output-chat-tele.jpg',
+          desc: 'Proyek client: bot notifikasi pembayaran QRIS masuk dan pencairan saldo GoPay Merchant ke Telegram, dengan penyimpanan persisten, pencegahan duplikat, dan penanganan kegagalan pengiriman.',
+          desc_en: 'A client project that sends incoming QRIS payment and GoPay Merchant payout notifications to Telegram, with persistent storage, duplicate prevention, and delivery failure handling.',
+          tech: ['Python', 'Node.js', 'SQLite', 'Telegram Bot API', 'Docker'],
+          source_note: 'Source code dan kredensial client tidak dipublikasikan. Screenshot Telegram ditampilkan sebagai dokumentasi hasil proyek.',
+          source_note_en: 'Client source code and credentials are not published. The Telegram screenshot documents the project\'s output.',
+          docs: `<div class="markdown-content cashflow-case">
+            <p class="case-label">PROYEK CLIENT / OTOMASI / OKTOBER 2026</p>
+            <h2>Dari transaksi ke notifikasi.</h2>
+            <p>CashFlow membantu client memantau pembayaran QRIS masuk dan pencairan saldo melalui Telegram. Notifikasi menampilkan jenis transaksi, nominal, waktu WIB, status, dan referensi agar informasi lebih mudah dipantau dalam satu percakapan.</p>
+            <h3>Implementasi</h3>
+            <ul><li>Gateway Node.js sebagai penghubung sumber transaksi dan watcher Python untuk pemeriksaan berkala.</li><li>Normalisasi event, penyimpanan SQLite, dan antrean pengiriman persisten (outbox).</li><li>Deduplikasi berdasarkan identitas transaksi/event, bukan hanya kesamaan nominal.</li><li>Penanganan retry dan rate limit. Pengiriman dengan hasil tidak pasti ditahan untuk review, bukan langsung dikirim ulang.</li><li>Runner perintah Telegram terpisah dan konfigurasi deployment Docker Compose.</li></ul>
+            <h3>Hasil langsung di Telegram</h3>
+            <p>Screenshot asli di atas memperlihatkan notifikasi pembayaran QRIS masuk dan pencairan saldo di Telegram, lengkap dengan nominal, waktu transaksi WIB, status, dan referensi.</p>
+            <h3>Verifikasi &amp; batas cakupan</h3>
+            <p>Pada uji offline skenario normal dan kegagalan, menjalankan ulang masing-masing skenario menggunakan database yang sama menghasilkan nol pemanggilan sender tambahan. Bukti ini memeriksa deduplikasi di simulasi, bukan jaminan pengiriman exactly-once di jaringan nyata.</p>
+            <p>Integrasi yang ditampilkan berfokus pada pembayaran QRIS dan pencairan saldo. Refund dan transfer lain diuji sebagai skenario simulasi, bukan klaim fitur transaksi live.</p>
+          </div>`,
+          docs_en: `<div class="markdown-content cashflow-case">
+            <p class="case-label">CLIENT PROJECT / AUTOMATION / OCTOBER 2026</p>
+            <h2>From transactions to notifications.</h2>
+            <p>CashFlow helps a client monitor incoming QRIS payments and balance payouts through Telegram. Notifications include the transaction type, amount, time in Western Indonesian Time, status, and reference in one conversation.</p>
+            <h3>Implementation</h3>
+            <ul><li>A Node.js gateway connects the transaction source to a Python watcher that polls periodically.</li><li>Event normalization, SQLite persistence, and a persistent delivery outbox.</li><li>Deduplication based on transaction/event identities rather than amounts alone.</li><li>Retry and rate-limit handling. Ambiguous delivery outcomes are held for review instead of blindly retried.</li><li>A separate Telegram command runner and Docker Compose deployment configuration.</li></ul>
+            <h3>Actual Telegram output</h3>
+            <p>The original screenshot above shows incoming QRIS payment and balance payout notifications in Telegram, including amounts, transaction times in Western Indonesian Time, statuses, and references.</p>
+            <h3>Verification &amp; scope</h3>
+            <p>In offline tests of normal and failure scenarios, replaying each scenario against its existing database produced zero additional sender calls. This checks simulated deduplication; it does not guarantee exactly-once delivery over a real network.</p>
+            <p>The integration presented here focuses on QRIS payments and balance payouts. Refunds and other transfers are tested as simulated scenarios, not claimed live features.</p>
+          </div>`
+        },
         sudoku: {
           title: 'Permainan Sudoku Terminal',
           image: 'img/projek/sudoku/Sudoku_Thumb.png',
-          desc: 'Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C. Proyek ini dijalankan melalui terminal dengan berbagai level kesulitan.',
+          desc: 'Program Sudoku berbasis terminal yang saya kerjakan untuk mata kuliah Dasar-Dasar Pemrograman. Fokusnya adalah pengolahan papan, validasi langkah, dan beberapa tingkat kesulitan.',
           title_en: 'Terminal Sudoku Game',
-          desc_en: 'Sudoku Game is a project from Basic Programming (DDP) course using C language. This project is run via terminal with various difficulty levels.',
+          desc_en: 'A terminal-based Sudoku program built for my Basic Programming course. It focuses on board management, move validation, and multiple difficulty levels.',
           tech: ['C', 'CLI', 'Game Dev'],
           github_readme: 'https://raw.githubusercontent.com/dzhax499/SudokuTUBESDDP/refs/heads/main/readme.md',
           github_repo: 'https://github.com/dzhax499/SudokuTUBESDDP',
@@ -91,9 +165,9 @@
         tetris: {
           title: 'Game Tetris (C & Raylib)',
           image: 'img/projek/tetris/image.png',
-          desc: 'Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D.',
+          desc: 'Implementasi Tetris dengan C dan Raylib. Saya menangani logika giliran, bentuk balok, grid permainan, deteksi tabrakan, penghapusan baris, dan tampilan 2D.',
           title_en: 'Tetris Game (C & Raylib)',
-          desc_en: 'Recreation of the classic Tetris game using C programming language and Raylib framework. This project demonstrates basic game logic implementation, matrix manipulation for grid, collision detection, and 2D graphics rendering.',
+          desc_en: 'A Tetris implementation built with C and Raylib. I worked on turn logic, pieces, the game grid, collision detection, line clearing, and 2D rendering.',
           tech: ['C','Raylib','Game Dev'],
           github_readme: 'https://raw.githubusercontent.com/dzhax499/TetrisGame-C4/main/README.md',
           github_repo: 'https://github.com/dzhax499/TetrisGame-C4',
@@ -102,9 +176,9 @@
         turnbase: {
           title: 'Game Turn-Based',
           image: 'img/projek/turnbase/image.png',
-          desc: 'Proyek game turn-based yang menampilkan mekanik permainan giliran, strategi, dan rendering menggunakan grafis.',
+          desc: 'Game turn-based berbasis Java yang saya gunakan untuk mempraktikkan pengelolaan giliran, aturan permainan, dan pemisahan logika dari tampilan.',
           title_en: 'Turn-Based Game',
-          desc_en: 'A turn-based game project featuring turn mechanics, strategy, and rendering using graphics.',
+          desc_en: 'A Java turn-based game used to practice turn management, game rules, and separating logic from presentation.',
           tech: ['Java','Maven','Game Dev'],
           github_readme: 'https://raw.githubusercontent.com/dzhax499/TurnBaseGameJava/refs/heads/main/README.md',
           github_repo: 'https://github.com/dzhax499/TurnBaseGameJava',
@@ -112,7 +186,7 @@
         },
         webapp: {
           title: 'Pengembangan Aplikasi Berbasis Website',
-          image: 'img/webapp.jpg',
+          image: 'img/project-placeholder.svg',
           desc: 'Web application using modern web technologies: responsive UI and backend functionality.',
           title_en: 'Website Based Application Development',
           desc_en: 'Web application using modern web technologies: responsive UI and backend functionality.',
@@ -122,9 +196,9 @@
         sidora: {
           title: 'SiDoRa (Sistem Dokumen Dosen)',
           image: 'img/projek/web-manajemen-dosen/sidora-web-manajemen.png',
-          desc: 'Aplikasi Manajemen Dokumen Dosen (SiDoRa) yang memudahkan dosen dan Tata Usaha (TU) dalam mengelola dan memonitor dokumen resmi secara terpusat.',
+          desc: 'SiDoRa membantu dosen dan Tata Usaha mengunggah, mengelola, dan memantau dokumen administrasi dalam satu tempat.',
           title_en: 'SiDoRa (Lecturer Document System)',
-          desc_en: 'Lecturer Document Management Application (SiDoRa) that facilitates lecturers and administration staff (TU) in managing and monitoring official documents centrally.',
+          desc_en: 'SiDoRa helps lecturers and administrative staff upload, manage, and track academic documents in one place.',
           tech: ['Web Development', 'System Management'],
           github_readme: 'https://raw.githubusercontent.com/C1-Proyek3-Apk-Manajemen-Adm-Dosen/devOps/refs/heads/main/README.md',
           github_repo: 'https://github.com/dzhax499/manajemen-dok-dosen/tree/develop',
@@ -133,247 +207,66 @@
         bloxantara: {
           title: 'Bloxantara Defense',
           image: 'img/projek/bloxantara/thumbnail.png',
-          desc: 'Sebuah game pertahanan strategis seru yang dikembangkan di platform Roblox bernama Bloxantara Defense.',
+          desc: 'Game tower defense di Roblox. Pemain menempatkan unit pertahanan, mengatur sumber daya, dan menghadapi gelombang musuh yang terus meningkat.',
           title_en: 'Bloxantara Defense',
-          desc_en: 'A fun strategic defense game developed on the Roblox platform named Bloxantara Defense.',
+          desc_en: 'A Roblox tower defense game where players place defensive units, manage resources, and face increasingly difficult enemy waves.',
           tech: ['Roblox Studio', 'LUA', 'Game Dev'],
           github_repo: 'https://www.roblox.com/games/73622901744147/Bloxantara-Defense',
-          docs: '<p>Mainkan gamenya langsung di Roblox melalui link <a href="https://www.roblox.com/games/73622901744147/Bloxantara-Defense" target="_blank" style="color: #00fff2;">di sini</a>.</p> <br> <h3>Gameplay Video:</h3> <p><em>(Nanti kita tambahkan video gameplay di sini)</em></p>'
+          docs: '<p>Mainkan gamenya langsung di Roblox melalui link <a href="https://www.roblox.com/games/73622901744147/Bloxantara-Defense" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">di sini</a>.</p> <br> <h3>Gameplay Video:</h3> <div class="video-frame"><iframe src="https://www.youtube.com/embed/8E8EyRw6Uqs" title="Demo Roblox" allowfullscreen loading="lazy"></iframe></div>'
         },
         ocr_wa: {
           title: 'OCR WhatsApp Donation Automation',
-          image: 'img/projek/ocr-wa/thumbnail.png',
-          desc: 'Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.',
+          image: 'img/projek/ocr-wa/5.jpg',
+          desc: 'Otomasi pembacaan bukti transfer WhatsApp dengan PaddleOCR, pilihan program donasi, pengecekan duplikat, dan pencatatan data sambil menunggu konfirmasi mutasi bank.',
           title_en: 'OCR WhatsApp Donation Automation',
-          desc_en: 'An OCR WhatsApp automation system to automatically process donation transfer receipts using AI and workflow automation.',
-          tech: ['n8n', 'Python', 'Docker', 'WhatsApp API'],
-          raw_markdown: `
-# 📄 OCR WhatsApp Donation Automation
-
-> Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.
-
-**Status:** ✅ Completed (Maret 2026)
-
-## 📌 Overview
-
-Project ini dibuat untuk mengurangi proses verifikasi donasi yang sebelumnya dilakukan secara manual.
-
-Pengguna cukup mengirimkan screenshot bukti transfer melalui WhatsApp. Sistem akan membaca isi gambar menggunakan OCR, mengekstrak informasi penting, kemudian melakukan validasi dan melanjutkan percakapan secara otomatis.
-
-Workflow ini dibangun menggunakan **n8n**, **Python**, dan **Docker**, sehingga mudah di-deploy dan dikembangkan lebih lanjut.
-
----
-
-## ✨ Features
-
-* 📷 OCR otomatis dari screenshot bukti transfer
-* 🤖 AI Parsing untuk membaca informasi transaksi
-* 💰 Deteksi nominal transfer
-* 👤 Identifikasi nama pengirim
-* 🔍 Validasi data transaksi
-* 💬 Chatbot WhatsApp otomatis
-* 📋 Meminta pilihan program donasi
-* 🆔 Input kode relawan (opsional)
-* 🗄️ Penyimpanan data donatur
-* ⚙️ Workflow otomatis tanpa intervensi manual
-
----
-
-## 🔄 Workflow
-
-\`\`\`text
-User
- │
- ▼
-Mengirim Screenshot Transfer
- │
- ▼
-WhatsApp API / WAHA
- │
- ▼
-n8n Webhook
- │
- ▼
-OCR Processing (Python)
- │
- ▼
-Extract:
-- Nama
-- Nominal
-- Informasi Transfer
- │
- ▼
-Validasi Data
- │
- ▼
-Chatbot WhatsApp
- │
- ├── Pilih Program Donasi
- ├── Input Kode Relawan
- └── Konfirmasi Donasi
- │
- ▼
-Database
-\`\`\`
-
-![Full Workflow](img/projek/ocr-wa/full-workflow.png)
-
----
-
-# 📸 Example Conversation
-
-### 1. User mengirim bukti transfer
-
-\`\`\`
-📷 Screenshot Transfer
-\`\`\`
-
-↓
-
-### 2. Sistem membaca gambar
-
-\`\`\`
-Sedang memvalidasi...
-\`\`\`
-
-↓
-
-### 3. OCR berhasil
-
-\`\`\`
-Nama : Dzakir Tsabit
-Nominal : Rp10.001
-\`\`\`
-
-↓
-
-### 4. Bot meminta pilihan program
-
-\`\`\`
-Pilih Program Donasi
-
-1. Infaq
-2. Infaq Al Quran
-3. Infaq Ambulance
-...
-\`\`\`
-
-↓
-
-### 5. User memilih program
-
-\`\`\`
-2
-\`\`\`
-
-↓
-
-### 6. Bot meminta kode relawan
-
-\`\`\`
-Masukkan kode relawan
-atau '-' jika tidak ada
-\`\`\`
-
-↓
-
-### 7. Konfirmasi
-
-\`\`\`
-Data berhasil dicatat.
-
-Order ID :
-JLNML-20260320-XXXX
-\`\`\`
-
----
-
-# 🛠 Tech Stack
-
-| Technology      | Purpose                  |
-| --------------- | ------------------------ |
-| 🟢 n8n          | Workflow Automation      |
-| 🐍 Python       | OCR Processing & Parsing |
-| 🐳 Docker       | Deployment               |
-| 💬 WhatsApp API | Chat Automation          |
-| 🔍 OCR Engine   | Text Recognition         |
-| 🗄 Database     | Donor Storage            |
-
----
-
-# 🎯 Challenges
-
-Selama pengembangan, terdapat beberapa tantangan seperti:
-
-* OCR harus mampu membaca berbagai format screenshot bank.
-* Format bukti transfer berbeda-beda antar bank.
-* Nominal dan nama pengirim sering memiliki tata letak yang tidak konsisten.
-* Workflow harus mampu menangani berbagai kondisi error tanpa menghentikan proses otomatis.
-* Memastikan percakapan WhatsApp tetap berjalan meskipun terdapat data yang kurang lengkap.
-
----
-
-# 💡 Solution
-
-Beberapa solusi yang diterapkan:
-
-* Parsing hasil OCR menggunakan Python.
-* Validasi hasil ekstraksi sebelum diproses ke tahap berikutnya.
-* Penggunaan branching pada n8n untuk menangani berbagai skenario.
-* Otomatisasi percakapan berdasarkan hasil OCR dan input pengguna.
-* Logging pada setiap tahapan workflow untuk memudahkan debugging.
-
----
-
-# 📈 Result
-
-* Mengurangi proses input data secara manual.
-* Mempercepat verifikasi bukti transfer.
-* Mengurangi potensi human error.
-* Seluruh proses berjalan otomatis mulai dari upload bukti transfer hingga pencatatan data donasi.
-
----
-
-# 🧠 Architecture
-
-\`\`\`
-WhatsApp
-     │
-     ▼
- WhatsApp API
-     │
-     ▼
-    n8n
-     │
- ┌───┴─────────────┐
- │                 │
- ▼                 ▼
-OCR Python     Validation
- │                 │
- └──────┬──────────┘
-        ▼
- Conversation Logic
-        │
-        ▼
- Database
-\`\`\`
-
----
-
-# 📂 Project Highlights
-
-* Workflow terdiri dari puluhan node automation di n8n.
-* OCR mampu membaca screenshot transfer dari berbagai bank.
-* Percakapan WhatsApp bersifat dinamis berdasarkan hasil OCR.
-* Sistem dapat menangani validasi data sebelum disimpan.
-* Dibangun menggunakan arsitektur yang modular sehingga mudah dikembangkan untuk kebutuhan bisnis lainnya.
-
----
-
-## 📷 Portfolio Note
-
-> Karena project ini dikerjakan pada **Maret 2026**, beberapa screenshot hasil percakapan WhatsApp dan file pendukung sudah tidak tersedia. Dokumentasi yang ditampilkan merupakan rekonstruksi berdasarkan workflow dan hasil implementasi asli, sehingga tetap merepresentasikan fungsi serta alur kerja sistem yang dikembangkan.
-`
+          desc_en: 'WhatsApp receipt automation with PaddleOCR, donation program selection, duplicate checks, and donation records pending bank transaction confirmation.',
+          tech: ['n8n', 'Python', 'FastAPI', 'PaddleOCR', 'WAHA', 'Supabase', 'Docker'],
+          source_note: 'Source code dan kredensial client tidak dipublikasikan. Screenshot WhatsApp ditampilkan sebagai dokumentasi hasil proyek.',
+          source_note_en: 'Client source code and credentials are not published. The WhatsApp screenshots document the project\'s output.',
+          docs: `<div class="markdown-content ocr-case">
+            <p class="case-label">OCR / WHATSAPP AUTOMATION / MARET 2026</p>
+            <h2>Dari bukti transfer ke pencatatan donasi.</h2>
+            <p>Sistem membaca gambar bukti transfer dari WhatsApp, mengekstrak data dengan PaddleOCR, lalu membantu pengguna melengkapi program donasi, nama, dan kode relawan melalui percakapan otomatis. n8n mengatur alur chat melalui WAHA, sementara layanan Python/FastAPI menangani OCR, validasi, dan penyimpanan di Supabase.</p>
+            <h3>Hasil percakapan WhatsApp asli</h3>
+            <p>Lima screenshot berikut adalah potongan scroll dari dua percakapan, bukan satu alur yang disambung. Gambar ditampilkan utuh; klik untuk membuka ukuran aslinya. Teks chat tetap dalam bahasa Indonesia.</p>
+            <h3>Alur A — Pemilihan program &amp; pencatatan</h3>
+            <p>Urutan file 3 → 4 → 5: kirim bukti, pilih program, isi kode relawan, lalu terima nomor order. Pesan terakhir menyatakan <strong>menunggu konfirmasi mutasi bank</strong>, bukan konfirmasi dana berhasil diterima.</p>
+            <div class="chat-gallery"><figure class="chat-shot"><a href="img/projek/ocr-wa/3.jpg" target="_blank" rel="noopener noreferrer" aria-label="Perbesar screenshot WhatsApp 3"><img src="img/projek/ocr-wa/3.jpg" alt="01 / Bukti transfer diterima, validasi dimulai, dan bot menawarkan pilihan program infak." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>01 / Bukti transfer diterima, validasi dimulai, dan bot menawarkan pilihan program infak.</figcaption></figure>
+<figure class="chat-shot"><a href="img/projek/ocr-wa/4.jpg" target="_blank" rel="noopener noreferrer" aria-label="Perbesar screenshot WhatsApp 4"><img src="img/projek/ocr-wa/4.jpg" alt="02 / Daftar program dilanjutkan; pengguna memilih program dengan membalas angka." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>02 / Daftar program dilanjutkan; pengguna memilih program dengan membalas angka.</figcaption></figure>
+<figure class="chat-shot"><a href="img/projek/ocr-wa/5.jpg" target="_blank" rel="noopener noreferrer" aria-label="Perbesar screenshot WhatsApp 5"><img src="img/projek/ocr-wa/5.jpg" alt="03 / Kode relawan diisi. Donasi tercatat dengan Order ID dan menunggu konfirmasi mutasi bank." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>03 / Kode relawan diisi. Donasi tercatat dengan Order ID dan menunggu konfirmasi mutasi bank.</figcaption></figure></div>
+            <h3>Alur B — Penanganan donasi duplikat</h3>
+            <p>Urutan file 1 → 2: program dan nama diberikan melalui caption, kode relawan dilengkapi, lalu bot memberi tahu bahwa donasi sudah tercatat.</p>
+            <div class="chat-gallery"><figure class="chat-shot"><a href="img/projek/ocr-wa/1.jpg" target="_blank" rel="noopener noreferrer" aria-label="Perbesar screenshot WhatsApp 1"><img src="img/projek/ocr-wa/1.jpg" alt="01 / Caption mencantumkan program dan nama; bot meminta kode NIA relawan." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>01 / Caption mencantumkan program dan nama; bot meminta kode NIA relawan.</figcaption></figure>
+<figure class="chat-shot"><a href="img/projek/ocr-wa/2.jpg" target="_blank" rel="noopener noreferrer" aria-label="Perbesar screenshot WhatsApp 2"><img src="img/projek/ocr-wa/2.jpg" alt="02 / Bot mendeteksi donasi yang sudah tercatat dan menampilkan nomor order sebelumnya." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>02 / Bot mendeteksi donasi yang sudah tercatat dan menampilkan nomor order sebelumnya.</figcaption></figure></div>
+            <h3>Bagian yang diimplementasikan</h3>
+            <ul><li>Ekstraksi teks bukti transfer dengan PaddleOCR dan pemrosesan gambar dengan OpenCV.</li><li>Parsing caption untuk nama dan jenis donasi, validasi data, serta jalur review manual saat diperlukan.</li><li>Menu program donasi dan pengumpulan kode relawan dalam alur percakapan n8n.</li><li>Pencatatan donasi dan pemeriksaan duplikat di Supabase.</li><li>Jalur pencocokan mutasi bank melalui Moota serta integrasi API platform donasi di source proyek.</li><li>Orkestrasi layanan WAHA, n8n, dan OCR API menggunakan Docker Compose.</li></ul>
+            <h3>Workflow otomasi</h3>
+            <figure class="case-figure"><a href="img/projek/ocr-wa/full-workflow.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/ocr-wa/full-workflow.png" alt="Workflow n8n untuk pemrosesan bukti transfer dan percakapan WhatsApp" loading="lazy" /></a><figcaption>Workflow proyek. Klik untuk melihat detail node pada ukuran asli.</figcaption></figure>
+            <h3>Catatan hasil</h3>
+            <p>Screenshot menunjukkan alur input, pemilihan program, status menunggu konfirmasi, dan respons duplikat. Fitur integrasi dirangkum dari source dan dokumentasi lokal; pemeriksaan portfolio ini tidak menjalankan layanan live, mengakses database, atau mengirim pesan WhatsApp.</p>
+          </div>`,
+          docs_en: `<div class="markdown-content ocr-case">
+            <p class="case-label">OCR / WHATSAPP AUTOMATION / MARCH 2026</p>
+            <h2>From transfer receipts to donation records.</h2>
+            <p>The system reads receipt images sent through WhatsApp, extracts data with PaddleOCR, and helps users complete their donation program, name, and volunteer code through an automated conversation. n8n manages chat flow through WAHA, while a Python/FastAPI service handles OCR, validation, and Supabase persistence.</p>
+            <h3>Original WhatsApp conversations</h3>
+            <p>These five screenshots are scroll captures from two separate conversations, not a single stitched sequence. Images are shown uncropped; click to open the originals. The original chat text is in Indonesian.</p>
+            <h3>Flow A — Program selection &amp; recording</h3>
+            <p>Files 3 → 4 → 5: submit a receipt, choose a program, enter a volunteer code, and receive an order reference. The final message says <strong>awaiting bank transaction confirmation</strong>, not that funds have been confirmed received.</p>
+            <div class="chat-gallery"><figure class="chat-shot"><a href="img/projek/ocr-wa/3.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge WhatsApp screenshot 3"><img src="img/projek/ocr-wa/3.jpg" alt="01 / The receipt is received, validation starts, and the bot offers donation programs." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>01 / The receipt is received, validation starts, and the bot offers donation programs.</figcaption></figure>
+<figure class="chat-shot"><a href="img/projek/ocr-wa/4.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge WhatsApp screenshot 4"><img src="img/projek/ocr-wa/4.jpg" alt="02 / The program list continues; the user selects a program by replying with its number." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>02 / The program list continues; the user selects a program by replying with its number.</figcaption></figure>
+<figure class="chat-shot"><a href="img/projek/ocr-wa/5.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge WhatsApp screenshot 5"><img src="img/projek/ocr-wa/5.jpg" alt="03 / The volunteer code is entered. A donation order is recorded, pending bank confirmation." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>03 / The volunteer code is entered. A donation order is recorded, pending bank confirmation.</figcaption></figure></div>
+            <h3>Flow B — Duplicate donation handling</h3>
+            <p>Files 1 → 2: the caption supplies the program and name, the volunteer code is entered, and the bot reports that the donation was already recorded.</p>
+            <div class="chat-gallery"><figure class="chat-shot"><a href="img/projek/ocr-wa/1.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge WhatsApp screenshot 1"><img src="img/projek/ocr-wa/1.jpg" alt="01 / The caption includes the program and donor name; the bot asks for a volunteer code." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>01 / The caption includes the program and donor name; the bot asks for a volunteer code.</figcaption></figure>
+<figure class="chat-shot"><a href="img/projek/ocr-wa/2.jpg" target="_blank" rel="noopener noreferrer" aria-label="Enlarge WhatsApp screenshot 2"><img src="img/projek/ocr-wa/2.jpg" alt="02 / The bot detects an existing donation and returns the previous order reference." loading="lazy" decoding="async" width="922" height="2048" /></a><figcaption>02 / The bot detects an existing donation and returns the previous order reference.</figcaption></figure></div>
+            <h3>Implemented components</h3>
+            <ul><li>Receipt text extraction with PaddleOCR and image processing with OpenCV.</li><li>Caption parsing for names and donation types, data validation, and manual-review paths where needed.</li><li>Donation program selection and volunteer code collection in the n8n conversation flow.</li><li>Donation persistence and duplicate checks in Supabase.</li><li>Moota bank-transaction matching and donation-platform API integration paths in the project source.</li><li>Docker Compose orchestration for WAHA, n8n, and the OCR API.</li></ul>
+            <h3>Automation workflow</h3>
+            <figure class="case-figure"><a href="img/projek/ocr-wa/full-workflow.png" target="_blank" rel="noopener noreferrer"><img src="img/projek/ocr-wa/full-workflow.png" alt="n8n workflow for receipt processing and WhatsApp conversations" loading="lazy" /></a><figcaption>Project workflow. Click to inspect the nodes at original size.</figcaption></figure>
+            <h3>Evidence notes</h3>
+            <p>The screenshots show input handling, program selection, pending confirmation, and duplicate responses. Integration features are summarized from local source code and documentation; this portfolio review did not run live services, access databases, or send WhatsApp messages.</p>
+          </div>`
         }
       };
 
@@ -396,9 +289,12 @@ OCR Python     Validation
         const tech = document.getElementById('pd-tech');
         const docs = document.getElementById('pd-doc-content');
         const sourceBtn = document.getElementById('pd-source-btn');
+        const sourceNote = document.getElementById('pd-source-note');
+        sourceNote.hidden = true;
+        sourceNote.textContent = '';
         const readmeInfo = document.getElementById('pd-readme-info');
 
-        let currentLang = localStorage.getItem('lang') || 'en';
+        const currentLang = document.documentElement.lang === 'en' ? 'en' : 'id';
         if (!data) {
           title.textContent = currentLang === 'id' ? 'Projek tidak ditemukan' : 'Project not found';
           desc.textContent = currentLang === 'id' ? 'Projek yang diminta belum ada.' : 'The requested project does not exist yet.';
@@ -408,6 +304,8 @@ OCR Python     Validation
         }
 
         title.textContent = currentLang === 'id' ? data.title : (data.title_en || data.title);
+        document.title = title.textContent + ' — Dzakir Tsabit';
+        img.alt = title.textContent;
         desc.textContent = currentLang === 'id' ? data.desc : (data.desc_en || data.desc);
         img.src = data.image || '';
         img.onerror = () => fallbackImage(img);
@@ -417,6 +315,10 @@ OCR Python     Validation
           sourceBtn.style.display = 'inline-block';
         } else {
           sourceBtn.style.display = 'none';
+          if (data.source_note) {
+            sourceNote.textContent = currentLang === 'en' ? (data.source_note_en || data.source_note) : data.source_note;
+            sourceNote.hidden = false;
+          }
         }
 
         tech.innerHTML = '';
@@ -433,7 +335,7 @@ OCR Python     Validation
           readmeInfo.style.display = 'none';
         }
 
-        docs.innerHTML = data.docs || '<p>No documentation yet.</p>';
+        docs.innerHTML = (currentLang === 'en' ? (data.docs_en || data.docs) : data.docs) || '<p>No documentation yet.</p>';
 
         if (data.github_readme) {
           fetch(data.github_readme)
@@ -456,7 +358,7 @@ OCR Python     Validation
       }
 
       populate();
-      
+
       document.addEventListener('langChanged', (e) => {
         populate();
       });

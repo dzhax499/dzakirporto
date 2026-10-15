@@ -1,105 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Dzakir Tsabit - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Manrope:400,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#f4f4f4" />
+  <link rel="icon" type="image/png" href="img/me/Dzakir-Tsabit-DZ-Logo.png" />
+  <meta name="description" content="Portofolio Dzakir Tsabit, mahasiswa Teknik Informatika Polban. Jelajahi projek web, game, dan otomasi yang saya bangun." />
+  <title>Dzakir Tsabit - Developer & Creative Thinker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="premium.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main" data-id="Langsung ke konten" data-en="Skip to content">Langsung ke konten</a>
   <header>
-    <div class="container">
-      <h1>Dzakir Tsabit</h1>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#about" data-id="Tentang" data-en="About">Tentang</a></li>
-          <li><a href="#projects" data-id="Projek" data-en="Projects">Projek</a></li>
-          <li><a href="#connect" data-id="Sosmed" data-en="Connect">Sosmed</a></li>
-          <li class="relative">
-            <a href="#contact" class="nav-highlight" data-id="Kontak" data-en="Contact">Kontak</a>
-            <img src="img/mouse-clicked-transparent.png" alt="Click here" class="absolute -bottom-8 -right-8 w-12 h-auto pointer-events-none drop-shadow-lg z-50 animate-bounce" style="background: transparent;" />
-          </li>
-          <li class="lang-switch-container">
-            <span class="lang-opt" data-lang="id">ID</span> <span style="color:#00fff2;opacity:0.5;">|</span> <span class="lang-opt" data-lang="en">EN</span>
-          </li>
-        </ul>
-      </nav>
+    <div class="container header-inner">
+      <a class="brand-link" href="./" aria-label="Dzakir Tsabit — Beranda"><img class="brand-logo" src="img/me/Dzakir-Tsabit-DZ-Logo.png" alt="Logo DZ" width="84" height="56" /><span class="brand-name">Dzakir Tsabit<span>DEVELOPER PORTFOLIO</span></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span class="hamburger"></span></button>
+      <nav class="nav-menu" id="main-nav"><ul>
+        <li><a href="#about" data-id="Tentang" data-en="About">Tentang</a></li>
+        <li><a href="#projects" data-id="Projek" data-en="Projects">Projek</a></li>
+        <li><a href="#connect" data-id="Terhubung" data-en="Connect">Terhubung</a></li>
+        <li class="lang-switch-container"><button class="lang-opt active" data-lang="id" aria-label="Bahasa Indonesia">ID</button><span>/</span><button class="lang-opt" data-lang="en" aria-label="English">EN</button></li>
+        <li><a href="#contact" class="nav-highlight"><span data-id="Mari ngobrol" data-en="Let's talk">Mari ngobrol</span> ↗</a></li>
+      </ul></nav>
     </div>
   </header>
-
-  <main>
-    <section id="about" class="relative">
-      <!-- Parallax Background Elements -->
-      <div class="parallax-bg absolute top-20 left-10 w-24 h-24 rounded-full border border-cyan-500/30 hidden md:block" data-speed="-3"></div>
-      <div class="parallax-bg absolute bottom-20 right-10 w-32 h-32 rounded-full border border-red-500/20 hidden md:block" data-speed="4"></div>
-      <div class="parallax-bg absolute top-1/2 right-1/4 w-16 h-16 rounded-sm border border-green-500/30 rotate-45 hidden md:block" data-speed="2"></div>
-      <div class="parallax-bg absolute bottom-1/4 left-1/4 w-12 h-12 rounded-sm border border-yellow-500/30 rotate-12 hidden md:block" data-speed="-2"></div>
-
-      <div class="container-horizontal relative z-10">
-        <div class="section-content reveal">
-          <div class="profile-img">
-            <img src="img/me/profile1-almet-transparent.png" alt="Dzakir Tsabit" class="glow-blue drop-shadow-[0_0_15px_rgba(0,255,242,0.5)]" />
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span><span data-id="BELAJAR. MEMBANGUN. BERTUMBUH." data-en="LEARNING. BUILDING. GROWING.">BELAJAR. MEMBANGUN. BERTUMBUH.</span></p>
+          <h1 id="hero-title" class="hero-arabic" lang="ar" dir="rtl">مَنْ جَدَّ وَجَدَ</h1>
+          <p class="hero-translation" data-id="Barang siapa yang bersungguh-sungguh, maka ia akan berhasil" data-en="Whoever strives earnestly will succeed">Barang siapa yang bersungguh-sungguh, maka ia akan berhasil</p>
+          <span class="motto-star" aria-hidden="true"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></span>
+          <p class="hero-intro"><strong data-id="Halo, saya Dzakir." data-en="Hi, I'm Dzakir.">Halo, saya Dzakir.</strong> <span data-id="Mahasiswa Teknik Informatika di Polban yang senang membangun web, game, dan otomasi untuk menyelesaikan masalah nyata." data-en="An Informatics Engineering student at Polban, building websites, games, and automations to solve real problems.">Mahasiswa Teknik Informatika di Polban yang senang membangun web, game, dan otomasi untuk menyelesaikan masalah nyata.</span></p>
+          <div class="hero-actions"><a class="button button-primary" href="#projects"><span data-id="Jelajahi karya" data-en="Explore my work">Jelajahi karya</span> ↗</a><a class="text-link" href="https://github.com/dzhax499" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        </div>
+        <div class="portrait-stage">
+        <figure class="portrait-card">
+          <div class="portrait-topline"><span>look ,its me!</span></div>
+          <img src="img/me/portrait-studio.jpg" alt="Dzakir Tsabit dengan jas almamater Polban, potret studio" width="1024" height="1536" fetchpriority="high" />
+          <div class="portrait-caption"><div><strong>Dzakir Tsabit<span>Developer & curious mind.</span></strong></div><a href="#about" aria-label="About Dzakir">↗</a></div>
+          <span class="portrait-side">ALWAYS A WORK IN PROGRESS</span>
+        </figure>
+        </div>
+      </div>
+    </section>
+    <div class="focus-strip-wrap">
+    <div class="focus-strip" role="region" aria-label="Areas of interest" tabindex="0">
+      <div class="focus-strip-track">
+        <div class="focus-strip-group"><span>WEB DEVELOPMENT</span><i aria-hidden="true"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i><span>GAME DEVELOPMENT</span><i aria-hidden="true"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i><span>AUTOMATION</span><i aria-hidden="true"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i><span>ALWAYS LEARNING</span><i aria-hidden="true"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i></div>
+        <div class="focus-strip-group" aria-hidden="true"><span>WEB DEVELOPMENT</span><i><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i><span>GAME DEVELOPMENT</span><i><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i><span>AUTOMATION</span><i><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i><span>ALWAYS LEARNING</span><i><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></i></div>
+      </div>
+    </div>
+    </div>
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow section-kicker">01 / SELECTED WORK</p><h2 data-id="Dibangun dengan rasa ingin tahu." data-en="Built with curiosity.">Dibangun dengan rasa ingin tahu.</h2></div><p data-id="Dari logika permainan hingga alur kerja otomatis. Berikut beberapa hal yang sudah saya bangun." data-en="From game logic to automated workflows. A selection of things I've brought to life.">Dari logika permainan hingga alur kerja otomatis. Berikut beberapa hal yang sudah saya bangun.</p></div>
+        <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filter projects"><button class="filter-button active" data-filter="all" aria-pressed="true" data-id="Semua" data-en="All work">Semua</button><button class="filter-button" data-filter="web" aria-pressed="false">Web</button><button class="filter-button" data-filter="game" aria-pressed="false">Games</button><button class="filter-button" data-filter="automation" aria-pressed="false" data-id="Otomasi" data-en="Automation">Otomasi</button></div></div>
+        <div class="projects-grid">
+          <div class="project reveal" data-work-type="client">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/cashflow-telegram/output-chat-tele.jpg" data-image="img/projek/cashflow-telegram/output-chat-tele.jpg" alt="Screenshot Telegram CashFlow: notifikasi uang masuk QRIS dan pencairan saldo" width="876" height="460" />
+            <div class="project-status" data-id="Proyek Client" data-en="Client Project">Proyek Client</div>
+            <h3>CashFlow Telegram Transaction Notifier</h3>
+            <p data-id="Bot untuk client yang mengirim notifikasi pembayaran QRIS masuk dan pencairan saldo GoPay Merchant ke Telegram. Dilengkapi penyimpanan SQLite, pencegahan notifikasi duplikat, dan penanganan pengiriman ulang." data-en="A client bot that sends incoming QRIS payment and GoPay Merchant payout notifications to Telegram, with SQLite persistence, duplicate prevention, and delivery retry handling.">Bot untuk client yang mengirim notifikasi pembayaran QRIS masuk dan pencairan saldo GoPay Merchant ke Telegram. Dilengkapi penyimpanan SQLite, pencegahan notifikasi duplikat, dan penanganan pengiriman ulang.</p>
+            <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Node.js</span><span class="tech-tag">SQLite</span><span class="tech-tag">Telegram Bot API</span><span class="tech-tag">Docker</span></div>
+            <a class="project-detail-link" href="project.html?id=cashflow_telegram" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
           </div>
-          <div class="about-text"
-            style="font-family: 'Courier New', Courier, monospace; text-align: left; text-shadow: none; font-size: 1.05rem; line-height: 1.6;">
-            <div class="text-red-500 font-bold text-xl mb-1">root@about-me</div>
-            <div class="text-gray-400 mb-4">----------------</div>
 
-            <div class="mb-3 flex items-start">
-              <span class="text-red-500 font-bold w-24 shrink-0">Whoami:</span>
-              <span class="text-gray-300"><span data-id="Halo! Saya " data-en="Hello! I'm ">Halo! Saya </span><strong class="text-red-500">Dzakir Tsabit</strong><span data-id=", mahasiswa Teknik Informatika di Politeknik Negeri Bandung (Polban)." data-en=", a passionate Informatics Engineering student at Bandung State Polytechnic (Polban).">, mahasiswa Teknik Informatika di Politeknik Negeri Bandung (Polban).</span></span>
+          <div class="project completed reveal" data-project="ocr_wa">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/ocr-wa/5.jpg" data-image="img/projek/ocr-wa/5.jpg" alt="Output WhatsApp OCR: pencatatan donasi menunggu konfirmasi bank" />
+            <div class="project-status">Completed</div>
+            <h3 data-id="OCR WhatsApp Donation Automation" data-en="OCR WhatsApp Donation Automation">OCR WhatsApp Donation Automation</h3>
+            <p data-id="Otomasi pembacaan bukti transfer WhatsApp dengan PaddleOCR, pilihan program donasi, pengecekan duplikat, dan pencatatan data sambil menunggu konfirmasi mutasi bank." data-en="WhatsApp receipt automation with PaddleOCR, donation program selection, duplicate checks, and donation records pending bank transaction confirmation.">
+              Otomasi pembacaan bukti transfer WhatsApp dengan PaddleOCR, pilihan program donasi, pengecekan duplikat, dan pencatatan data sambil menunggu konfirmasi mutasi bank.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PaddleOCR</span>
+              <span class="tech-tag">WAHA</span>
+              <span class="tech-tag">Supabase</span>
             </div>
-
-            <div class="mb-3 flex items-start">
-              <span class="text-red-500 font-bold w-24 shrink-0">Current:</span>
-              <span class="text-gray-300" data-id="Saat ini di semester 4, saya mendalami dunia pemrograman dan teknologi." data-en="Currently in my 4th semester, I'm diving deep into the world of programming and technology.">Saat ini di semester 4, saya mendalami dunia pemrograman dan teknologi.</span>
-            </div>
-
-            <div class="mb-3 flex items-start">
-              <span class="text-red-500 font-bold w-24 shrink-0">Passion:</span>
-              <span class="text-gray-300" data-id="Saya suka memecahkan masalah melalui kode dan menciptakan solusi inovatif." data-en="I love solving problems through code and creating innovative solutions.">Saya suka memecahkan masalah melalui kode dan menciptakan solusi inovatif.</span>
-            </div>
-
-            <div class="mb-3 flex items-start">
-              <span class="text-red-500 font-bold w-24 shrink-0">Journey:</span>
-              <span class="text-gray-300" data-id="Perjalanan saya di bidang informatika sangat menyenangkan, dan saya selalu bersemangat mempelajari teknologi baru dan meningkatkan kemampuan saya." data-en="My journey in informatics has been exciting, and I'm always eager to learn new technologies and improve my skills.">Perjalanan saya di bidang informatika sangat menyenangkan, dan saya selalu bersemangat mempelajari teknologi baru dan meningkatkan kemampuan saya.</span>
-            </div>
-
-            <div class="mt-6 flex">
-              <div class="w-6 h-6" style="background-color: #1a1b26;"></div>
-              <div class="w-6 h-6" style="background-color: #ef4444;"></div>
-              <div class="w-6 h-6" style="background-color: #22c55e;"></div>
-              <div class="w-6 h-6" style="background-color: #eab308;"></div>
-              <div class="w-6 h-6" style="background-color: #3b82f6;"></div>
-              <div class="w-6 h-6" style="background-color: #a855f7;"></div>
-              <div class="w-6 h-6" style="background-color: #06b6d4;"></div>
-              <div class="w-6 h-6" style="background-color: #f8fafc;"></div>
-            </div>
+            <a class="project-detail-link" href="project.html?id=ocr_wa" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
           </div>
-          <div class="flex items-center gap-2 text-3xl text-white font-bold uppercase">
-            <span>I'm</span>
 
-            <span class="relative inline-block overflow-hidden text-red-500 h-9"
-              data-words='["Learner","Builder","Programmer","Developer","Creator","Engineer"]'>
-              <span class="word-track block">
-                <span class="word word-current">Learner</span>
-              </span>
-            </span>
+          <div class="project reveal" data-work-type="working" data-project="machine_monitoring">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/machine-monitoring/dashboard.png" data-image="img/projek/machine-monitoring/dashboard.png" alt="Dashboard monitoring mesin dengan data simulasi" />
+            <div class="project-status" data-id="WORKING" data-en="WORKING">WORKING</div>
+            <h3>Machine Monitoring Dashboard</h3>
+            <p data-id="Prototipe dashboard untuk memantau status dan durasi operasi mesin, membaca riwayat, mengatur pengingat perawatan, serta mengekspor laporan harian. Preview memakai data simulasi." data-en="A prototype dashboard for machine status and operating durations, reading history, maintenance reminders, and daily report exports. Preview uses simulated data.">Prototipe dashboard untuk memantau status dan durasi operasi mesin, membaca riwayat, mengatur pengingat perawatan, serta mengekspor laporan harian. Preview memakai data simulasi.</p>
+            <div class="project-tech"><span class="tech-tag">Node.js</span><span class="tech-tag">Fastify</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Chart.js</span><span class="tech-tag">Tailwind CSS</span></div>
+            <a class="project-detail-link" href="project.html?id=machine_monitoring" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
+          </div>
+
+          <div class="project completed reveal">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/bloxantara/thumbnail.png" data-image="img/projek/bloxantara/thumbnail.png" alt="Bloxantara Defense" />
+            <div class="project-status">Completed</div>
+            <h3 data-id="Bloxantara Defense" data-en="Bloxantara Defense">Bloxantara Defense</h3>
+            <p data-id="Game tower defense di Roblox. Pemain menempatkan unit pertahanan, mengatur sumber daya, dan menghadapi gelombang musuh yang terus meningkat." data-en="A Roblox tower defense game where players place defensive units, manage resources, and face increasingly difficult enemy waves.">
+              Game tower defense di Roblox. Pemain menempatkan unit pertahanan, mengatur sumber daya, dan menghadapi gelombang musuh yang terus meningkat.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Roblox Studio</span>
+              <span class="tech-tag">LUA</span>
+              <span class="tech-tag">Game Dev</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=bloxantara" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
+          </div>
+
+          <div class="project completed reveal">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/web-manajemen-dosen/sidora-web-manajemen.png" data-image="img/projek/web-manajemen-dosen/sidora-web-manajemen.png" alt="SiDoRa (Sistem Dokumen Dosen)" />
+            <div class="project-status">Completed</div>
+            <h3 data-id="SiDoRa (Sistem Dokumen Dosen)" data-en="SiDoRa (Lecturer Document System)">SiDoRa (Sistem Dokumen Dosen)</h3>
+            <p data-id="SiDoRa membantu dosen dan Tata Usaha mengunggah, mengelola, dan memantau dokumen administrasi dalam satu tempat." data-en="SiDoRa helps lecturers and administrative staff upload, manage, and track academic documents in one place.">
+              SiDoRa membantu dosen dan Tata Usaha mengunggah, mengelola, dan memantau dokumen administrasi dalam satu tempat.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Web Development</span>
+              <span class="tech-tag">System Management</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=sidora" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
+          </div>
+
+          <div class="project completed reveal">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/tetris/demo-video.gif" data-image="img/projek/tetris/demo-video.gif" alt="Game Tetris (C & Raylib)" />
+            <div class="project-status">Completed</div>
+            <h3 data-id="Game Tetris (C & Raylib)" data-en="Tetris Game (C & Raylib)">Game Tetris (C & Raylib)</h3>
+            <p data-id="Implementasi Tetris dengan C dan Raylib. Saya menangani logika giliran, bentuk balok, grid permainan, deteksi tabrakan, penghapusan baris, dan tampilan 2D." data-en="A Tetris implementation built with C and Raylib. I worked on turn logic, pieces, the game grid, collision detection, line clearing, and 2D rendering.">
+              Implementasi Tetris dengan C dan Raylib. Saya menangani logika giliran, bentuk balok, grid permainan, deteksi tabrakan, penghapusan baris, dan tampilan 2D.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Raylib</span>
+              <span class="tech-tag">Game Dev</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=tetris" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
+          </div>
+
+          <div class="project completed reveal">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/turnbase/demo-appturnbase.gif" data-image="img/projek/turnbase/demo-appturnbase.gif" alt="Game Turn-Based" />
+            <div class="project-status">Completed</div>
+            <h3 data-id="Game Turn-Based" data-en="Turn-Based Game">Game Turn-Based</h3>
+            <p data-id="Game turn-based berbasis Java yang saya gunakan untuk mempraktikkan pengelolaan giliran, aturan permainan, dan pemisahan logika dari tampilan." data-en="A Java turn-based game used to practice turn management, game rules, and separating logic from presentation.">
+              Game turn-based berbasis Java yang saya gunakan untuk mempraktikkan pengelolaan giliran, aturan permainan, dan pemisahan logika dari tampilan.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Game Dev</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=turnbase" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
+          </div>
+
+          <div class="project completed reveal">
+            <img loading="lazy" decoding="async" class="project-thumb" src="img/projek/sudoku/Sudoku_Thumb.png"
+              data-image="img/projek/sudoku/Sudoku_Thumb.png" alt="Permainan Sudoku Terminal" />
+            <div class="project-status">Completed</div>
+            <h3 data-id="Permainan Sudoku Terminal" data-en="Terminal Sudoku Game">Permainan Sudoku Terminal</h3>
+            <p data-id="Program Sudoku berbasis terminal yang saya kerjakan untuk mata kuliah Dasar-Dasar Pemrograman. Fokusnya adalah pengolahan papan, validasi langkah, dan beberapa tingkat kesulitan." data-en="A terminal-based Sudoku program built for my Basic Programming course. It focuses on board management, move validation, and multiple difficulty levels.">
+              Program Sudoku berbasis terminal yang saya kerjakan untuk mata kuliah Dasar-Dasar Pemrograman. Fokusnya adalah pengolahan papan, validasi langkah, dan beberapa tingkat kesulitan.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">VS Code</span>
+              <span class="tech-tag">Git</span>
+            </div>
+            <a class="project-detail-link" href="project.html?id=sudoku" data-id="Jelajahi projek ↗" data-en="Explore project ↗">Jelajahi projek ↗</a>
           </div>
         </div>
-        <div class="skills mt-12 w-full">
-          <h3 class="text-center text-2xl font-bold mb-8 text-white reveal" data-id="Keahlian & Teknologi" data-en="Skills & Technologies">Keahlian & Teknologi</h3>
-          <div class="skills-grid reveal">
-            
+
+      </div>
+    </section>
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid reveal">
+          <div>
+            <p class="eyebrow section-kicker">02 / A LITTLE ABOUT ME</p>
+            <h2 class="about-quote" data-id="“Saya tidak punya bakat istimewa. Saya hanya memiliki rasa ingin tahu yang besar.”" data-en="“I have no special talent. I am only passionately curious.”">“Saya tidak punya bakat istimewa. Saya hanya memiliki rasa ingin tahu yang besar.”</h2>
+            <p class="quote-credit">— Albert Einstein </p>
+            <div class="cv-downloads">
+              <a class="text-link" href="doc/Dzakir_Tsabit_CV.pdf" download="Dzakir_Tsabit_CV.pdf"><span data-id="Unduh CV (ID)" data-en="Download CV (ID)">Unduh CV (ID)</span> ↗</a>
+              <a class="text-link" href="doc/Dzakir_Tsabit_CV_EN.pdf" download="Dzakir_Tsabit_CV_EN.pdf"><span data-id="Unduh CV (EN)" data-en="Download CV (EN)">Unduh CV (EN)</span> ↗</a>
+            </div>
+            <p class="cv-updated"><span data-id="Terakhir diperbarui:" data-en="Last updated:">Terakhir diperbarui:</span> <time datetime="2026-09-12" data-id="12 September 2026" data-en="12 September 2026">12 September 2026</time></p>
+          </div>
+          <div class="about-copy"><p class="about-lead" data-id="Saya menikmati proses mengubah masalah yang jelas menjadi program yang bisa dipakai dan dipelihara." data-en="I enjoy turning well-defined problems into software that people can use and maintain.">Saya menikmati proses mengubah masalah yang jelas menjadi program yang bisa dipakai dan dipelihara.</p><p data-id="Saya Dzakir Tsabit, mahasiswa Teknik Informatika semester 5 di Politeknik Negeri Bandung. Saat ini saya memperdalam pemrograman, pengembangan perangkat lunak, serta cara merancang sistem yang mudah digunakan." data-en="I'm Dzakir Tsabit, a fifth-semester Informatics Engineering student at Bandung State Polytechnic. I'm deepening my skills in programming, software development, and user-focused system design.">Saya Dzakir Tsabit, mahasiswa Teknik Informatika semester 5 di Politeknik Negeri Bandung. Saat ini saya memperdalam pemrograman, pengembangan perangkat lunak, serta cara merancang sistem yang mudah digunakan.</p><p data-id="Saya belajar melalui tugas kuliah, proyek bersama, dan eksperimen kecil. Setiap proyek membantu saya memahami cara kerja perangkat lunak dari perencanaan sampai pengujian." data-en="I learn through coursework, team projects, and small experiments. Each project helps me understand software from planning through testing.">Saya belajar melalui tugas kuliah, proyek bersama, dan eksperimen kecil. Setiap proyek membantu saya memahami cara kerja perangkat lunak dari perencanaan sampai pengujian.</p><div class="about-signoff"><span class="status-dot"></span><span data-id="Selalu ada hal baru untuk dipelajari." data-en="There's always something new to learn.">Selalu ada hal baru untuk dipelajari.</span></div></div>
+        </div>
+        <div class="skills-heading"><h3 data-id="Peralatan di balik pertempuran." data-en="The tools behind the battle.">Peralatan di balik pertempuran.</h3><span class="battle-visual" aria-hidden="true"><i></i></span><span data-id="TEKNOLOGI YANG SAYA GUNAKAN" data-en="TECHNOLOGIES I WORK WITH">TEKNOLOGI YANG SAYA GUNAKAN</span></div>
+          <div class="skills-grid">
+
             <div class="skill-category">
               <h4>Web Development</h4>
               <div class="skill-list-grouped">
@@ -111,7 +202,7 @@
                 <span class="skill-item">Laravel</span>
               </div>
             </div>
-            
+
             <div class="skill-category">
               <h4>Programming Languages</h4>
               <div class="skill-list-grouped">
@@ -126,7 +217,7 @@
                 <span class="skill-item">Shell</span>
               </div>
             </div>
-            
+
             <div class="skill-category">
               <h4>Databases</h4>
               <div class="skill-list-grouped">
@@ -136,7 +227,7 @@
                 <span class="skill-item">PostgreSQL</span>
               </div>
             </div>
-            
+
             <div class="skill-category">
               <h4>Tools & OS</h4>
               <div class="skill-list-grouped">
@@ -150,7 +241,7 @@
                 <span class="skill-item">Linux - Debian & Kali</span>
               </div>
             </div>
-            
+
             <div class="skill-category">
               <h4>Game Development</h4>
               <div class="skill-list-grouped">
@@ -159,7 +250,7 @@
                 <span class="skill-item">Blender</span>
               </div>
             </div>
-            
+
             <div class="skill-category">
               <h4>Cybersecurity & Net</h4>
               <div class="skill-list-grouped">
@@ -188,169 +279,29 @@
                 <span class="skill-item">PaddleOCR</span>
               </div>
             </div>
-            
+
           </div>
+      </div>
+    </section>
+    <section id="connect" class="section connect-section">
+      <div class="container"><div class="section-heading reveal"><div><p class="eyebrow section-kicker">03 / ELSEWHERE ON THE INTERNET</p><h2 data-id="Tetap terhubung." data-en="Let's stay connected.">Tetap terhubung.</h2></div><p data-id="Karya, perjalanan belajar, dan sedikit keseharian." data-en="Projects, things I'm learning, and a little everyday life.">Karya, perjalanan belajar, dan sedikit keseharian.</p></div>
+        <div class="social-links">
+          <a class="social-link" href="https://github.com/dzhax499" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.51c.48.09.66-.21.66-.46v-1.68c-2.69.58-3.26-1.14-3.26-1.14-.44-1.11-1.08-1.41-1.08-1.41-.88-.6.07-.59.07-.59.97.07 1.48 1 1.48 1 .86 1.47 2.25 1.05 2.8.8.09-.62.34-1.05.61-1.29-2.15-.24-4.41-1.08-4.41-4.79 0-1.06.38-1.92 1-2.6-.1-.24-.43-1.23.1-2.56 0 0 .82-.26 2.67.99a9.3 9.3 0 0 1 4.86 0c1.85-1.25 2.67-.99 2.67-.99.53 1.33.2 2.32.1 2.56.62.68 1 1.54 1 2.6 0 3.72-2.27 4.55-4.43 4.78.35.3.65.87.65 1.76v2.6c0 .25.18.55.67.46A9.5 9.5 0 0 0 12 2.5Z"/></svg><span>GitHub<small>@dzhax499</small></span><span aria-hidden="true">↗</span></a>
+          <a class="social-link" href="https://www.linkedin.com/in/dzakir-tsabit-b49666325/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.1 7.2A1.7 1.7 0 1 0 5.1 3.8a1.7 1.7 0 0 0 0 3.4ZM3.6 20.2h3V9.1h-3v11.1ZM8.5 9.1h2.9v1.5h.04c.4-.75 1.38-1.84 3.05-1.84 3.26 0 3.86 2.15 3.86 4.94v6.49h-3v-5.75c0-1.37-.03-3.13-1.91-3.13-1.91 0-2.2 1.49-2.2 3.03v5.85h-3V9.1Z"/></svg><span>LinkedIn<small>Dzakir Tsabit</small></span><span aria-hidden="true">↗</span></a>
+          <a class="social-link" href="https://www.instagram.com/dzakirtsabit/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.7" r="1" class="social-icon-dot"/></svg><span>Instagram<small>@dzakirtsabit</small></span><span aria-hidden="true">↗</span></a>
+          <a class="social-link" href="https://www.facebook.com/daz.dzakir/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.87.24-1.46 1.5-1.46h1.7V4a22 22 0 0 0-2.48-.13c-2.45 0-4.13 1.5-4.13 4.25V10H7.5v3h2.8v8h3.4Z"/></svg><span>Facebook<small>Dzakir Tsabit</small></span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
-
-    <section id="projects">
-      <div class="container">
-        <h2 class="reveal" data-id="Projek Saya" data-en="My Projects">Projek Saya</h2>
-        <div class="projects-grid">
-          <div class="project completed pot reveal">
-            <img class="project-thumb" src="img/projek/sudoku/Sudoku_Thumb.png"
-              data-image="img/projek/sudoku/Sudoku_Thumb.png" alt="Permainan Sudoku Terminal" />
-            <div class="project-status">Completed</div>
-            <h3 data-id="Permainan Sudoku Terminal" data-en="Terminal Sudoku Game">Permainan Sudoku Terminal</h3>
-            <p data-id="Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C" data-en="Sudoku Game is a project from Basic Programming (DDP) course using C language">
-              Game Sudoku adalah tugas dari DDP (Dasar Dasar Pemrograman) yang menggunakan Bahasa C
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">C</span>
-              <span class="tech-tag">VS Code</span>
-              <span class="tech-tag">Git</span>
-            </div>
-            <a class="project-detail-link" href="project.html?id=sudoku">View Details</a>
-          </div>
-
-          <div class="project completed reveal">
-            <img class="project-thumb" src="img/projek/tetris/demo-video.gif" data-image="img/projek/tetris/demo-video.gif" alt="Game Tetris (C & Raylib)" />
-            <div class="project-status">Completed</div>
-            <h3 data-id="Game Tetris (C & Raylib)" data-en="Tetris Game (C & Raylib)">Game Tetris (C & Raylib)</h3>
-            <p data-id="Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D." data-en="Recreation of the classic Tetris game using C programming language and Raylib framework. This project demonstrates basic game logic implementation, matrix manipulation for grid, collision detection, and 2D graphics rendering.">
-              Pengembangan ulang game klasik Tetris menggunakan bahasa pemrograman C dan framework Raylib. Proyek ini mendemonstrasikan implementasi logika game dasar, manipulasi matriks untuk grid, deteksi tabrakan (collision detection), dan rendering grafis 2D.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">C</span>
-              <span class="tech-tag">Raylib</span>
-              <span class="tech-tag">Game Dev</span>
-            </div>
-            <a class="project-detail-link" href="project.html?id=tetris">View Details</a>
-          </div>
-
-          <div class="project completed reveal">
-            <img class="project-thumb" src="img/projek/turnbase/demo-appturnbase.gif" data-image="img/projek/turnbase/demo-appturnbase.gif" alt="Game Turn-Based" />
-            <div class="project-status">Completed</div>
-            <h3 data-id="Game Turn-Based" data-en="Turn-Based Game">Game Turn-Based</h3>
-            <p data-id="Proyek game turn-based yang menampilkan mekanik permainan giliran, strategi, dan interaksi yang menarik." data-en="A turn-based game project featuring turn mechanics, strategy, and engaging interactions.">
-              Proyek game turn-based yang menampilkan mekanik permainan giliran, strategi, dan interaksi yang menarik.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">C/C++</span>
-              <span class="tech-tag">Game Dev</span>
-            </div>
-            <a class="project-detail-link" href="project.html?id=turnbase">View Details</a>
-          </div>
-
-          <div class="project completed reveal">
-            <img class="project-thumb" src="img/projek/web-manajemen-dosen/sidora-web-manajemen.png" data-image="img/projek/web-manajemen-dosen/sidora-web-manajemen.png" alt="SiDoRa (Sistem Dokumen Dosen)" />
-            <div class="project-status">Completed</div>
-            <h3 data-id="SiDoRa (Sistem Dokumen Dosen)" data-en="SiDoRa (Lecturer Document System)">SiDoRa (Sistem Dokumen Dosen)</h3>
-            <p data-id="Aplikasi Manajemen Dokumen Dosen (SiDoRa) yang memudahkan dosen dan Tata Usaha (TU) dalam mengelola dan memonitor dokumen resmi dan administrasi secara terpusat." data-en="Lecturer Document Management Application (SiDoRa) that facilitates lecturers and administration staff (TU) in managing and monitoring official documents and administration centrally.">
-              Aplikasi Manajemen Dokumen Dosen (SiDoRa) yang memudahkan dosen dan Tata Usaha (TU) dalam mengelola dan memonitor dokumen resmi dan administrasi secara terpusat.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Web Development</span>
-              <span class="tech-tag">System Management</span>
-            </div>
-            <a class="project-detail-link" href="project.html?id=sidora">View Details</a>
-          </div>
-
-          <div class="project completed reveal">
-            <img class="project-thumb" src="img/projek/bloxantara/thumbnail.png" data-image="img/projek/bloxantara/thumbnail.png" alt="Bloxantara Defense" />
-            <div class="project-status">Completed</div>
-            <h3 data-id="Bloxantara Defense" data-en="Bloxantara Defense">Bloxantara Defense</h3>
-            <p data-id="Game pertahanan strategis yang dikembangkan di platform Roblox, memberikan pengalaman bermain yang seru dan menantang." data-en="A strategic defense game developed on the Roblox platform, providing a fun and challenging gameplay experience.">
-              Game pertahanan strategis yang dikembangkan di platform Roblox, memberikan pengalaman bermain yang seru dan menantang.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Roblox Studio</span>
-              <span class="tech-tag">LUA</span>
-              <span class="tech-tag">Game Dev</span>
-            </div>
-            <a class="project-detail-link" href="project.html?id=bloxantara">View Details</a>
-          </div>
-
-          <div class="project completed reveal">
-            <img class="project-thumb" src="img/projek/ocr-wa/thumbnail.png" data-image="img/projek/ocr-wa/thumbnail.png" alt="OCR WhatsApp Donation Automation" />
-            <div class="project-status">Completed</div>
-            <h3 data-id="OCR WhatsApp Donation Automation" data-en="OCR WhatsApp Donation Automation">OCR WhatsApp Donation Automation</h3>
-            <p data-id="Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation." data-en="An OCR WhatsApp automation system to automatically process donation transfer receipts using AI and workflow automation.">
-              Sistem otomasi OCR WhatsApp untuk memproses bukti transfer donasi secara otomatis menggunakan AI dan workflow automation.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">n8n</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">WhatsApp API</span>
-            </div>
-            <a class="project-detail-link" href="project.html?id=ocr_wa">View Details</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="connect" class="connect">
-      <div class="container">
-        <h2 class="reveal" data-id="Terhubung dengan Saya" data-en="Connect with Me">Terhubung dengan Saya</h2>
-        <div class="social-links reveal">
-          <a href="https://www.facebook.com/daz.dzakir/" target="_blank" class="social-link">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/civicdici/" target="_blank" class="social-link">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/dzakir-tsabit-b49666325/" target="_blank" class="social-link">
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/dzhax499" target="_blank" class="social-link">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2 class="reveal" data-id="Hubungi Saya" data-en="Contact Me">Hubungi Saya</h2>
-        <div class="container">
-          <div class="social-links reveal">
-            <a href="https://wa.me/62895352376780" target="_blank" class="social-link">
-              <i class="fa fa-whatsapp"></i>
-            </a>
-            <a href="https://mail.google.com/mail/u/0/?to=dzdzakir@gmail.com&su=I%27m%20Visiting%20Your%20Web%20Porto%20!&body=Type%20your%20purpose...&fs=1&tf=cm"
-              target="_blank" class="social-link">
-              <i class="fa fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+    <section id="contact" class="contact-section">
+      <div class="container contact-inner"><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2><span data-id="Ide bagus dimulai" data-en="Good things start">Ide bagus dimulai</span><br><span data-id="dari percakapan." data-en="with a conversation.">dari percakapan.</span><span class="contact-star" aria-hidden="true"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></span></h2><div class="contact-bottom"><p data-id="Punya ide, pertanyaan, atau ingin bertukar cerita? Saya senang mendengarnya." data-en="Have an idea, a question, or a story to share? I'd love to hear it.">Punya ide, pertanyaan, atau ingin bertukar cerita? Saya senang mendengarnya.</p><a class="button button-dark" href="mailto:dzdzakir@gmail.com"><span data-id="Kirim email" data-en="Send an email">Kirim email</span> ↗</a><a class="contact-whatsapp" href="https://wa.me/62895352376780" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><a class="contact-email" href="mailto:dzdzakir@gmail.com">dzdzakir@gmail.com</a><a class="contact-phone" href="https://wa.me/62895352376780" target="_blank" rel="noopener noreferrer">+62 895-3523-76780</a></div>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p data-id="&copy; 2026 Portofolio Dzakir Tsabit" data-en="&copy; 2026 Dzakir Tsabit Portfolio">&copy; 2026 Portofolio Dzakir Tsabit</p>
-    </div>
-  </footer>
-
-  <!-- Project detail modal -->
-  <div id="projectModal" class="project-modal" aria-hidden="true">
-    <div class="project-modal-overlay" data-close></div>
-    <div class="project-modal-content" role="dialog" aria-modal="true">
-      <button class="project-modal-close" aria-label="Close">×</button>
-      <div class="project-modal-body">
-        <img class="project-modal-thumb" src="" alt="Project image" />
-        <h3 class="project-modal-title"></h3>
-        <p class="project-modal-desc"></p>
-        <div class="project-modal-tech"></div>
-        <div style="text-align: right; margin-top: 25px;">
-          <a class="project-modal-link project-detail-link" href="#" style="display: inline-block;" data-id="Lihat Detail Penuh" data-en="View Full Details">Lihat Detail Penuh</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <footer><div class="container footer-inner"><a class="brand-link" href="./">Dzakir Tsabit<span class="footer-star"><img class="star-image" src="img/overlay/bintang-overlay-transparent.png" alt="" width="140" height="140" /></span></a><p data-id="© 2026 · Dibuat dengan rasa ingin tahu." data-en="© 2026 · Made with curiosity.">© 2026 · Dibuat dengan rasa ingin tahu.</p><a href="#main" data-id="Kembali ke atas ↑" data-en="Back to top ↑">Kembali ke atas ↑</a></div></footer>
+  <dialog id="projectModal" class="project-modal" aria-labelledby="projectModalTitle">
+    <button class="project-modal-close" aria-label="Close project details">×</button>
+    <div class="project-modal-body"><img class="project-modal-thumb" alt="" /><p class="eyebrow section-kicker">PROJECT PREVIEW</p><h3 id="projectModalTitle" class="project-modal-title"></h3><p class="project-modal-desc"></p><div class="project-modal-tech"></div><a class="project-modal-link button button-primary" href="#" data-id="Lihat detail projek ↗" data-en="View project details ↗">Lihat detail projek ↗</a></div>
+  </dialog>
   <script src="script.js"></script>
 </body>
-
 </html>
